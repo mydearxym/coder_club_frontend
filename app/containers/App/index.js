@@ -32,6 +32,9 @@ function App(props) {
       <A className={styles.logoWrapper} href="https://twitter.com/mxstbr">
         <Img className={styles.logo} src={Banner} alt="react-boilerplate - Logo" />
       </A>
+      <div className="theme_green">theme green</div>
+      <div className="theme_tomato">theme tomato</div>
+      <div className={styles.base_on_theme + ' theme_tomato'}>base_on_theme</div>
       {props.children}
       <Footer />
     </div>

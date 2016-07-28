@@ -20,6 +20,22 @@ body.fontLoaded {
   min-width: 100%;
 }
 
+.theme_red {
+  color: tomato;
+}
+
+:global(.theme_green) {
+  color: yellowgreen;
+}
+
+:global(.theme_tomato) {
+  color: tomato;
+}
+
+.base_on_theme {
+  composes: theme_dark from './global.css';
+}
+
 .wrapper {
   max-width: calc(768px + 16px * 2);
   margin: 0 auto;

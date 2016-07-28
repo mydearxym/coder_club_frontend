@@ -30,10 +30,20 @@ import H2 from 'components/H2';
 import List from 'components/List';
 import ListItem from 'components/ListItem';
 import LoadingIndicator from 'components/LoadingIndicator';
+import ThemeLabel from 'components/ThemeLabel';
 
 import styles from './styles.css';
+import themeLight from 'containers/App/theme-light.css'
+import themeDark from 'containers/App/theme-dark.css'
 
 export class HomePage extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      cur_theme: '',
+    }
+  };
+
   /**
    * when initial state username is not null, submit the form to load repos
    */
@@ -58,6 +68,22 @@ export class HomePage extends React.Component {
     this.openRoute('/features');
   };
 
+  switchTheme (theme) {
+    console.log('switchTheme', theme);
+    console.log('getInitialState', this.getInitialState())
+    let cur_theme = '';
+    if ('A' === theme) {
+      cur_theme = themeLight;
+    } else {
+      cur_theme = themeDark;
+    }
+
+    this.setState({
+      cur_theme: cur_theme,
+    })
+
+  };
+
   render() {
     let mainContent = null;
 
@@ -71,11 +97,12 @@ export class HomePage extends React.Component {
         <ListItem item={'Something went wrong, please try again!'} />
       );
       mainContent = (<List component={ErrorComponent} />);
-
     // If we're not loading, don't have an error and there are repos, show the repos
     } else if (this.props.repos !== false) {
       mainContent = (<List items={this.props.repos} component={RepoListItem} />);
     }
+
+    const cur_theme = this.state.cur_theme || themeDark
 
     return (
       <article>
@@ -85,6 +112,12 @@ export class HomePage extends React.Component {
             { name: 'description', content: 'A React.js Boilerplate application homepage' },
           ]}
         />
+
+        <span><Button onClick={this.switchTheme.bind(this, 'A')}>theme A</Button></span>
+        <span><Button onClick={this.switchTheme.bind(this, 'B')}>theme B</Button></span>
+
+        <ThemeLabel theme={cur_theme} />
+
         <div>
           <section className={`${styles.textSection} ${styles.centered}`}>
             <H2>Start your next react project in seconds</H2>

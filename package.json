@@ -80,7 +80,8 @@
       "mocha": true
     },
     "rules": {
-      "max-len": 0
+        "max-len": 0,
+        "camelcase": 0
     },
     "settings": {
       "import/resolver": {
