@@ -14,10 +14,13 @@ import 'sanitize.css/sanitize.css';
 
 import Img from 'components/Img';
 import Footer from 'components/Footer';
-import Banner from './banner-metal.jpg';
-import A from 'components/A';
-
+/* import Banner from './banner-metal.jpg';
+ * import A from 'components/A';
+ * */
 import styles from './styles.css';
+/* <A className={styles.logoWrapper} href="https://twitter.com/mxstbr">*/
+/* <Img className={styles.logo} src={Banner} alt="react-boilerplate - Logo" />*/
+/* </A>*/
 
 function App(props) {
   return (
@@ -29,12 +32,9 @@ function App(props) {
           { name: 'description', content: 'A React.js Boilerplate application' },
         ]}
       />
-      <A className={styles.logoWrapper} href="https://twitter.com/mxstbr">
-        <Img className={styles.logo} src={Banner} alt="react-boilerplate - Logo" />
-      </A>
-      <div className="theme_green">theme green</div>
-      <div className="theme_tomato">theme tomato</div>
-      <div className={styles.base_on_theme + ' theme_tomato'}>base_on_theme</div>
+
+      <h1>React 最佳实践!</h1>
+
       {props.children}
       <Footer />
     </div>

@@ -30,19 +30,16 @@ import H2 from 'components/H2';
 import List from 'components/List';
 import ListItem from 'components/ListItem';
 import LoadingIndicator from 'components/LoadingIndicator';
-import ThemeLabel from 'components/ThemeLabel';
 
 import styles from './styles.css';
-import themeLight from 'containers/App/theme-light.css'
-import themeDark from 'containers/App/theme-dark.css'
 
 export class HomePage extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       cur_theme: '',
-    }
-  };
+    };
+  }
 
   /**
    * when initial state username is not null, submit the form to load repos
@@ -68,20 +65,8 @@ export class HomePage extends React.Component {
     this.openRoute('/features');
   };
 
-  switchTheme (theme) {
-    console.log('switchTheme', theme);
-    console.log('getInitialState', this.getInitialState())
-    let cur_theme = '';
-    if ('A' === theme) {
-      cur_theme = themeLight;
-    } else {
-      cur_theme = themeDark;
-    }
-
-    this.setState({
-      cur_theme: cur_theme,
-    })
-
+  openThemePage = () => {
+    this.openRoute('/theme');
   };
 
   render() {
@@ -102,8 +87,6 @@ export class HomePage extends React.Component {
       mainContent = (<List items={this.props.repos} component={RepoListItem} />);
     }
 
-    const cur_theme = this.state.cur_theme || themeDark
-
     return (
       <article>
         <Helmet
@@ -112,11 +95,6 @@ export class HomePage extends React.Component {
             { name: 'description', content: 'A React.js Boilerplate application homepage' },
           ]}
         />
-
-        <span><Button onClick={this.switchTheme.bind(this, 'A')}>theme A</Button></span>
-        <span><Button onClick={this.switchTheme.bind(this, 'B')}>theme B</Button></span>
-
-        <ThemeLabel theme={cur_theme} />
 
         <div>
           <section className={`${styles.textSection} ${styles.centered}`}>
@@ -141,6 +119,7 @@ export class HomePage extends React.Component {
             {mainContent}
           </section>
           <Button handleRoute={this.openFeaturesPage}>Features</Button>
+          <Button handleRoute={this.openThemePage}>主题</Button>
         </div>
       </article>
     );

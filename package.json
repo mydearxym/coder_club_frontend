@@ -81,7 +81,8 @@
     },
     "rules": {
         "max-len": 0,
-        "camelcase": 0
+        "camelcase": 0,
+        "react/jsx-no-bind": 0
     },
     "settings": {
       "import/resolver": {

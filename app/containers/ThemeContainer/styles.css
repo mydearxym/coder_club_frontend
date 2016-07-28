@@ -1,0 +1,9 @@
+.themeContainer {
+  .theme_red {
+    color: tomato;
+  }
+
+  .base_on_theme {
+    composes: theme_dark from './theme.css';
+  }
+}
