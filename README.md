@@ -1,12 +1,32 @@
 
 [![Build Status](https://travis-ci.org/mydearxym/coder_club_frontend.svg?branch=master)](https://travis-ci.org/mydearxym/coder_club_frontend)
-[![devDependency](https://david-dm.org/mydearxym/coder_club_frontend.svg)](https://david-dm.org/mydearxym/coder_club_frontend#info=devDependencies)
+[![devDependencies](https://david-dm.org/mydearxym/coder_club_frontend.svg)](https://david-dm.org/mydearxym/coder_club_frontend#info=devDependencies)
+[![devDependency](https://david-dm.org/mydearxym/coder_club_frontend.svg)](https://david-dm.org/mydearxym/coder_club_frontend)
 
+[![Coverage Status](https://coveralls.io/repos/github/mydearxym/coder_club_frontend/badge.svg?branch=master)](https://coveralls.io/github/mydearxym/coder_club_frontend?branch=master)
 
-<div align="center"><strong>Start your next react project in seconds</strong></div>
-<div align="center">A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices</div>
 
 <br />
+
+<div align="center">
+  <!-- Dependency Status -->
+  <a href="https://david-dm.org/mydearxym/coder_club_frontend">
+    <img src="https://david-dm.org/mydearxym/coder_club_frontend.svg" alt="Dependency Status" />
+  </a>
+  <!-- devDependency Status -->
+  <a href="https://david-dm.org/mydearxym/coder_club_frontend#info=devDependencies">
+    <img src="https://david-dm.org/mydearxym/coder_club_frontend/dev-status.svg" alt="devDependency Status" />
+  </a>
+  <!-- Build Status -->
+  <a href="https://travis-ci.org/mydearxym/coder_club_frontend">
+    <img src="https://travis-ci.org/mydearxym/coder_club_frontend.svg?branch=master" alt="Build Status" />
+  </a>
+  <!-- Test Coverage -->
+  <a href="https://coveralls.io/github/mydearxym/coder_club_frontend?branch=master">
+    <img src="https://coveralls.io/repos/github/mydearxym/coder_club_frontend/badge.svg?branch=master" alt="Test Coverage" />
+  </a>
+</div>
+
 
 <div align="center">
   <!-- Dependency Status -->
