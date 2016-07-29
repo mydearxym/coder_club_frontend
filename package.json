@@ -1,10 +1,10 @@
 {
-  "name": "react-boilerplate",
+  "name": "coder_club_frontend",
   "version": "3.0.0",
   "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mxstbr/react-boilerplate.git"
+    "url": "git://github.com/mydearxym/coder_club_frontend.git"
   },
   "engines": {
     "npm": ">=3"
