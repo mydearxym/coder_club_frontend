@@ -1,6 +1,7 @@
 
 [![Build Status](https://travis-ci.org/mydearxym/coder_club_frontend.svg?branch=master)](https://travis-ci.org/mydearxym/coder_club_frontend)
 [![devDependency](https://david-dm.org/mydearxym/coder_club_frontend.svg)](https://david-dm.org/mydearxym/coder_club_frontend#info=devDependencies)
+[![Coverage Status](https://coveralls.io/repos/github/mydearxym/coder_club_frontend/badge.svg?branch=master)](https://coveralls.io/github/mydearxym/coder_club_frontend?branch=master)
 
 
 <div align="center"><strong>Start your next react project in seconds</strong></div>
