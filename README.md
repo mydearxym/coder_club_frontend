@@ -1,6 +1,6 @@
 
-build status
 [![Build Status](https://travis-ci.org/mydearxym/coder_club_frontend.svg?branch=master)](https://travis-ci.org/mydearxym/coder_club_frontend)
+[![devDependency](https://david-dm.org/mydearxym/coder_club.svg)](https://david-dm.org/mydearxym/coder_club#info=devDependencies)
 
 <img src="https://raw.githubusercontent.com/mxstbr/react-boilerplate-brand/master/assets/banner-metal.jpg" alt="react boilerplate banner" align="center" />
 
