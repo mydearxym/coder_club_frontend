@@ -85,7 +85,7 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
 
 ThemeContainer.propTypes = {
   changeRoute: React.PropTypes.func,
-}
+};
 
 function mapDispatchToProps(dispatch) {
   return {

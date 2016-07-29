@@ -118,7 +118,7 @@ export class HomePage extends React.Component {
             </form>
             {mainContent}
           </section>
-          <Button handleRoute={this.openFeaturesPage}>Features</Button>
+          <Button className="feature_page_button" handleRoute={this.openFeaturesPage}>Features</Button>
           <Button handleRoute={this.openThemePage}>主题</Button>
         </div>
       </article>

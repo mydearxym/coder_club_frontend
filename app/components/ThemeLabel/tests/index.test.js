@@ -1,9 +1,9 @@
-import ThemeLabel from '../index';
-
-import expect from 'expect';
-import { shallow } from 'enzyme';
-import React from 'react';
-
+/* import ThemeLabel from '../index';
+ *
+ * import expect from 'expect';
+ * import { shallow } from 'enzyme';
+ * import React from 'react';
+ * */
 describe('<ThemeLabel />', () => {
 
 });
