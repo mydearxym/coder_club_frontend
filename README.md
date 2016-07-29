@@ -1,10 +1,7 @@
 
 [![Build Status](https://travis-ci.org/mydearxym/coder_club_frontend.svg?branch=master)](https://travis-ci.org/mydearxym/coder_club_frontend)
-[![devDependency](https://david-dm.org/mydearxym/coder_club_frontend.svg)](https://david-dm.org/mydearxym/coder_club_frontend.svg)
+[![devDependency](https://david-dm.org/mydearxym/coder_club_frontend.svg)](https://david-dm.org/mydearxym/coder_club_frontend#info=devDependencies)
 
-<img src="https://raw.githubusercontent.com/mxstbr/react-boilerplate-brand/master/assets/banner-metal.jpg" alt="react boilerplate banner" align="center" />
-
-<br />
 
 <div align="center"><strong>Start your next react project in seconds</strong></div>
 <div align="center">A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices</div>
