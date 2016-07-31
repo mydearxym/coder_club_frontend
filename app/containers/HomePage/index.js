@@ -31,6 +31,8 @@ import List from 'components/List';
 import ListItem from 'components/ListItem';
 import LoadingIndicator from 'components/LoadingIndicator';
 
+import { Tag } from 'antd';
+
 import styles from './styles.css';
 
 export class HomePage extends React.Component {
@@ -95,6 +97,11 @@ export class HomePage extends React.Component {
             { name: 'description', content: 'A React.js Boilerplate application homepage' },
           ]}
         />
+
+        <Tag closable color="blue">蓝色</Tag>
+        <Tag closable color="green">绿色</Tag>
+        <Tag closable color="yellow"><a href="https://github.com/ant-design/ant-design/issues/1862">黄色</a></Tag>
+        <Tag closable color="red">红色</Tag>
 
         <div>
           <section className={`${styles.textSection} ${styles.centered}`}>
