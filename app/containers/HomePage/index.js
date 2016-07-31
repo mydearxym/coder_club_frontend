@@ -31,6 +31,8 @@ import List from 'components/List';
 import ListItem from 'components/ListItem';
 import LoadingIndicator from 'components/LoadingIndicator';
 
+import { Tag } from 'antd';
+
 import styles from './styles.css';
 
 export class HomePage extends React.Component {
@@ -95,6 +97,8 @@ export class HomePage extends React.Component {
             { name: 'description', content: 'A React.js Boilerplate application homepage' },
           ]}
         />
+
+        <Tag>tag</Tag>
 
         <div>
           <section className={`${styles.textSection} ${styles.centered}`}>
