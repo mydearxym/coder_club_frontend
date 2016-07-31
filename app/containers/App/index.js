@@ -18,6 +18,8 @@ import Footer from 'components/Footer';
  * import A from 'components/A';
  * */
 import styles from './styles.css';
+import 'antd/dist/antd.css';
+
 /* <A className={styles.logoWrapper} href="https://twitter.com/mxstbr">*/
 /* <Img className={styles.logo} src={Banner} alt="react-boilerplate - Logo" />*/
 /* </A>*/

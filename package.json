@@ -58,7 +58,6 @@
       "react",
       "stage-0"
     ],
-    "plugins": [["antd", { "style": "css" }]],
     "env": {
       "production": {
         "only": [

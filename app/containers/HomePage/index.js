@@ -98,7 +98,10 @@ export class HomePage extends React.Component {
           ]}
         />
 
-        <Tag>tag</Tag>
+        <Tag closable color="blue">蓝色</Tag>
+        <Tag closable color="green">绿色</Tag>
+        <Tag closable color="yellow"><a href="https://github.com/ant-design/ant-design/issues/1862">黄色</a></Tag>
+        <Tag closable color="red">红色</Tag>
 
         <div>
           <section className={`${styles.textSection} ${styles.centered}`}>
