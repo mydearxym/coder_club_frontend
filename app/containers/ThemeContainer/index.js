@@ -43,20 +43,21 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
   switchTheme(theme) {
     console.log('switchTheme', theme);
 
-    let cur_theme = '';
+    let curTheme;
+
     if (theme === 'A') {
-      cur_theme = themeLight;
+      curTheme = themeLight;
     } else {
-      cur_theme = themeDark;
+      curTheme = themeDark;
     }
 
     this.setState({
-      cur_theme,
+      curTheme,
     });
   }
 
   render() {
-    const cur_theme = this.state.cur_theme || themeDark;
+    const curTheme = this.state.cur_theme || themeDark;
 
     return (
       <div className={styles.themeContainer}>
@@ -75,7 +76,7 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
         <span><Button onClick={this.switchTheme.bind(this, 'B')}>theme B</Button></span>
 
         <h2>ThemeLabel</h2>
-        <ThemeLabel theme={cur_theme} />
+        <ThemeLabel theme={curTheme} />
         <Button handleRoute={this.openHomePage}>Home</Button>
 
       </div>
