@@ -31,7 +31,8 @@ import List from 'components/List';
 import ListItem from 'components/ListItem';
 import LoadingIndicator from 'components/LoadingIndicator';
 
-import { Tag } from 'antd';
+/* import { Tag } from 'antd';*/
+import Tag from 'antd/lib/tag';
 
 import styles from './styles.css';
 
