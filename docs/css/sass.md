@@ -1,3 +1,18 @@
+
+
+# 安装
+
+注意安装 node-sass 高版本可能会造成冲突，需要使用运行一下 `node rebuild node-sass` , 参见
+[这个issue](https://github.com/sass/node-sass/issues/1579)。
+
+另外注意使用 sass 引入的时候，需要尼玛加分号啊
+
+import 'path/to/global';
+不加分号会报很让人迷惑的错：比如[这个](https://github.com/sass/node-sass/issues/1270)
+
+还有，你以为你引入的是 global.scss, 其实你引入的是 _global.scss, 我能骂脏话吗。。
+
+
 # Can I use Sass with this boilerplate?
 
 Yes, although we advise against it and **do not support this**. We selected

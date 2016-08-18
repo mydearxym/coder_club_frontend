@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 
 import Helmet from 'react-helmet';
-import styles from './styles.css';
+import styles from './styles.scss';
 
 import ThemeLabel from 'components/ThemeLabel';
 import Button from 'components/Button';
@@ -59,8 +59,10 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
   render() {
     const curTheme = this.state.cur_theme || themeDark;
 
+    console.log('curTheme', curTheme)
+
     return (
-      <div className={styles.themeContainer}>
+      <div>
         <Helmet
           title="ThemeContainer"
           meta={[
@@ -68,17 +70,24 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
           ]}
         />
 
-        <div className="theme_green">theme green</div>
-        <div className="theme_tomato">theme tomato</div>
-        <div className={`${styles.base_on_theme}  theme_tomato`}>base_on_theme</div>
+        <h2 className={styles.sass_color}>ouside sassman</h2>
+        <h2 className="sass_color">global sassman</h2>
+        <h1 className={styles.hide_on_tv}>hide_on_tv</h1>
 
-        <span><Button onClick={this.switchTheme.bind(this, 'A')}>theme A</Button></span>
-        <span><Button onClick={this.switchTheme.bind(this, 'B')}>theme B</Button></span>
+        <div className={styles.themeContainer}>
 
-        <h2>ThemeLabel</h2>
-        <ThemeLabel theme={curTheme} />
-        <Button handleRoute={this.openHomePage}>Home</Button>
+          <h2 className={styles.sass_color}>i am sass man</h2>
+          <div className="theme_green">theme green</div>
+          <div className="theme_tomato">theme tomato</div>
+          <div className={`${styles.base_on_theme}  theme_tomato`}>base_on_theme</div>
 
+          <span><Button onClick={this.switchTheme.bind(this, 'A')}>theme A</Button></span>
+          <span><Button onClick={this.switchTheme.bind(this, 'B')}>theme B</Button></span>
+
+          <h2>ThemeLabel</h2>
+          <ThemeLabel theme={curTheme} />
+          <Button handleRoute={this.openHomePage}>Home</Button>
+        </div>
       </div>
     );
   }
