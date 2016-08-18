@@ -17,7 +17,7 @@ function ThemeLabel({ theme }) {
 }
 
 ThemeLabel.propTypes = {
-  theme: PropTypes.string,
+  theme: PropTypes.object,
 };
 
 export default ThemeLabel;
