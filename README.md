@@ -11,7 +11,7 @@
     <img src="https://david-dm.org/mydearxym/coder_club_frontend.svg" alt="Dependency Status" />
   </a>
   <!-- devDependency Status -->
-  <a href="https://david-dm.org/mydearxym/coder_club_frontend#info=devDependencies">
+  <a href="https://david-dm.org/mydearxym/coder_club_frontend?type=dev">
     <img src="https://david-dm.org/mydearxym/coder_club_frontend/dev-status.svg" alt="devDependency Status" />
   </a>
   <!-- Build Status -->
