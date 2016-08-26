@@ -4,6 +4,6 @@
   }
 
   .base_on_theme {
-    /* composes: theme_dark from './theme.css'; */
+    composes: theme_dark from './theme.css';
   }
 }

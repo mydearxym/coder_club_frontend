@@ -56,6 +56,10 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
     });
   }
 
+  componentDidMount () {
+    console.log('componentsDidMount')
+  }
+
   render() {
     const curTheme = this.state.cur_theme || themeDark;
 
@@ -70,16 +74,16 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
           ]}
         />
 
+        <h2 className={styles.base_on_theme}>base_on_theme</h2>
+
         <h2 className={styles.sass_color}>ouside sassman</h2>
         <h2 className="sass_color">global sassman</h2>
         <h1 className={styles.hide_on_tv}>hide_on_tv</h1>
 
         <div className={styles.themeContainer}>
-
           <h2 className={styles.sass_color}>i am sass man</h2>
           <div className="theme_green">theme green</div>
           <div className="theme_tomato">theme tomato</div>
-          <div className={`${styles.base_on_theme}  theme_tomato`}>base_on_theme</div>
 
           <span><Button onClick={this.switchTheme.bind(this, 'A')}>theme A</Button></span>
           <span><Button onClick={this.switchTheme.bind(this, 'B')}>theme B</Button></span>
