@@ -26,8 +26,12 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
     };
   }
 
+  componentDidMount() {
+    /* console.log('componentsDidMount')*/
+  }
+
   openRoute = (route) => {
-    console.log('openRoute3');
+    /* console.log('openRoute3');*/
     /* debugger*/
     this.props.changeRoute(route);
   };
@@ -56,14 +60,10 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
     });
   }
 
-  componentDidMount () {
-    console.log('componentsDidMount')
-  }
-
   render() {
     const curTheme = this.state.cur_theme || themeDark;
 
-    console.log('curTheme', curTheme)
+    /* console.log('curTheme', curTheme)*/
 
     return (
       <div>
