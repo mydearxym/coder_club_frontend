@@ -83,6 +83,11 @@
           "transform-react-constant-elements",
           "transform-react-inline-elements"
         ]
+      },
+      "test": {
+        "plugins": [
+          "istanbul"
+        ]
       }
     }
   },
@@ -220,6 +225,7 @@
     "babel-core": "6.14.0",
     "babel-eslint": "6.1.2",
     "babel-loader": "6.2.4",
+    "babel-plugin-istanbul": "2.0.0",
     "babel-plugin-antd": "0.5.1",
     "babel-plugin-react-transform": "2.0.2",
     "babel-plugin-transform-react-constant-elements": "6.9.1",
@@ -252,8 +258,6 @@
     "html-webpack-plugin": "2.22.0",
     "image-webpack-loader": "2.0.0",
     "imports-loader": "0.6.5",
-    "isparta": "4.0.0",
-    "isparta-loader": "2.0.0",
     "json-loader": "0.5.4",
     "karma": "1.2.0",
     "karma-chrome-launcher": "1.0.1",

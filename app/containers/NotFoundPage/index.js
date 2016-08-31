@@ -17,7 +17,7 @@ export function NotFound(props) {
       <H1>Page not found.</H1>
       <Button
         handleRoute={function redirect() {
-          props.changeRoute('/');
+          props.dispatch(push('/'));
         }}
       >
         Home
@@ -27,15 +27,8 @@ export function NotFound(props) {
 }
 
 NotFound.propTypes = {
-  changeRoute: React.PropTypes.func,
+  dispatch: React.PropTypes.func,
 };
 
-// react-redux stuff
-function mapDispatchToProps(dispatch) {
-  return {
-    changeRoute: (url) => dispatch(push(url)),
-  };
-}
-
 // Wrap the component to inject dispatch and state into it
-export default connect(null, mapDispatchToProps)(NotFound);
+export default connect()(NotFound);

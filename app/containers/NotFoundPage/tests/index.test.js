@@ -3,7 +3,7 @@
  */
 
 import expect from 'expect';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import React from 'react';
 
 import { NotFound } from '../index';
@@ -26,19 +26,16 @@ describe('<NotFound />', () => {
     expect(renderedButton.length).toEqual(1);
   });
 
-  it('should link to "/"', () => {
-    const changeRouteSpy = expect.createSpy();
-    const onChangeRoute = (dest) => {
-      if (dest === '/') {
-        changeRouteSpy();
-      }
+  it('should link to "/"', (done) => {
+    const dispatch = (action) => {
+      expect(action.payload.args).toEqual('/');
+      done();
     };
 
-    const renderedComponent = mount(
-      <NotFound changeRoute={onChangeRoute} />
+    const renderedComponent = shallow(
+      <NotFound dispatch={dispatch} />
     );
-    const button = renderedComponent.find('button');
-    button.simulate('click');
-    expect(changeRouteSpy).toHaveBeenCalled();
+    const button = renderedComponent.find(Button);
+    button.prop('handleRoute')();
   });
 });
