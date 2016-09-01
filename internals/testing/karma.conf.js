@@ -5,7 +5,10 @@ const path = require('path');
 module.exports = (config) => {
   config.set({
     frameworks: ['mocha'],
-    reporters: ['coverage', 'mocha'],
+    reporters: ['coverage', 'mocha', 'osx'],
+    osxReporter: {
+      notificationMode: 'always',
+    },
     browsers: process.env.TRAVIS // eslint-disable-line no-nested-ternary
       ? ['ChromeTravis']
       : process.env.APPVEYOR
