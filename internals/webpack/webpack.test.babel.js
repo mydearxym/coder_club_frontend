@@ -2,7 +2,7 @@
  * TEST WEBPACK CONFIGURATION
  */
 
-const path = require('path');
+/* const path = require('path');*/
 const webpack = require('webpack');
 const modules = [
   'app',
@@ -11,24 +11,12 @@ const modules = [
 
 module.exports = {
   devtool: 'inline-source-map',
-  isparta: {
-    babel: {
-      presets: ['es2015', 'react', 'stage-0'],
-    },
-  },
-
   module: {
     // Some libraries don't like being run through babel.
     // If they gripe, put them here.
     noParse: [
       /node_modules(\\|\/)sinon/,
       /node_modules(\\|\/)acorn/,
-    ],
-    preLoaders: [
-      { test: /\.js$/,
-        loader: 'isparta',
-        include: path.resolve('app/'),
-      },
     ],
     loaders: [
       { test: /\.json$/, loader: 'json-loader' },
