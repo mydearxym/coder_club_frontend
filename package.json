@@ -64,14 +64,7 @@
       "stage-0"
     ],
     "plugins": [
-      [
-        "antd",
-        {
-          "style": true,
-          "libraryDirectory": "component",
-          "libraryName": "antd"
-        }
-      ]
+      ["lodash", { "id": ["async", "lodash-bound"] }]
     ],
     "env": {
       "production": {
@@ -227,6 +220,7 @@
     "babel-loader": "6.2.4",
     "babel-plugin-antd": "0.5.1",
     "babel-plugin-istanbul": "2.0.0",
+    "babel-plugin-lodash": "^3.2.8",
     "babel-plugin-react-transform": "2.0.2",
     "babel-plugin-transform-react-constant-elements": "6.9.1",
     "babel-plugin-transform-react-inline-elements": "6.8.0",
@@ -270,6 +264,7 @@
     "karma-sourcemap-loader": "0.3.7",
     "karma-webpack": "1.8.0",
     "lint-staged": "2.0.3",
+    "lodash-webpack-plugin": "^0.10.0",
     "minimist": "1.2.0",
     "mocha": "3.0.2",
     "ngrok": "2.2.2",
