@@ -64,7 +64,7 @@
       "stage-0"
     ],
     "plugins": [
-      ["lodash", { "id": ["async", "lodash-bound"] }]
+      ["lodash"]
     ],
     "env": {
       "production": {
