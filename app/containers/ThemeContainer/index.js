@@ -13,6 +13,7 @@ import styles from './styles.scss';
 
 import ThemeLabel from 'components/ThemeLabel';
 import Button from 'components/Button';
+import { Button as AButton } from 'antd';
 
 import themeLight from './theme-light.css';
 import themeDark from './theme-dark.css';
@@ -66,7 +67,7 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
     /* console.log('curTheme', curTheme)*/
 
     return (
-      <div>
+      <div >
         <Helmet
           title="ThemeContainer"
           meta={[
@@ -75,6 +76,11 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
         />
 
         <h2 className={styles.base_on_theme}>base_on_theme</h2>
+
+        <div className={"theme_light"}>
+          <h2 >light/dark theme</h2>
+          <AButton type="primary">Hello</AButton>
+        </div>
 
         <h2 className={styles.sass_color}>ouside sassman</h2>
         <h2 className="sass_color">global sassman</h2>

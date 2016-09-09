@@ -19,7 +19,8 @@
     "preinstall": "npm run npmcheckversion",
     "postinstall": "npm run build:dll",
     "prebuild": "npm run build:clean && npm run test",
-    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p",
+    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p || true",
+    "build:only": "NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p || true",
     "build:clean": "npm run test:clean && rimraf ./build",
     "build:dll": "node ./internals/scripts/dependencies.js",
     "start": "cross-env NODE_ENV=development webpack-dashboard -- node server",
@@ -64,7 +65,8 @@
       "stage-0"
     ],
     "plugins": [
-      ["lodash"]
+      ["lodash"],
+      ["antd"]
     ],
     "env": {
       "production": {
@@ -188,7 +190,7 @@
     ]
   },
   "dependencies": {
-    "antd": "^1.7.0",
+    "antd": "1.11.0",
     "babel-polyfill": "6.13.0",
     "chalk": "1.1.3",
     "compression": "1.6.2",

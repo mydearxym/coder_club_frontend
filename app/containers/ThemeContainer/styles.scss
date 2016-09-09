@@ -12,6 +12,14 @@ $theTomato: orange;
     }
 }
 
+.theme_dark {
+  .ant-btn-primary {
+    color: white;
+    background-color: yellowgreen;
+    border-color: darken(yellowgreen, 10%);
+  }
+}
+
 .themeContainer {
   .theme_red {
     color: tomato;
