@@ -18,7 +18,9 @@ import Footer from 'components/Footer';
  * import A from 'components/A';
  * */
 import styles from './styles.css';
-import 'antd/dist/antd.css';
+
+// 按需加载: https://github.com/ant-design/ant-design/issues/900#issue-127675746
+/* import 'antd/dist/antd.css';*/
 
 /* <A className={styles.logoWrapper} href="https://twitter.com/mxstbr">*/
 /* <Img className={styles.logo} src={Banner} alt="react-boilerplate - Logo" />*/

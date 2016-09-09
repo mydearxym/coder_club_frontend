@@ -65,8 +65,16 @@
       "stage-0"
     ],
     "plugins": [
-      ["lodash"],
-      ["antd"]
+      [
+        "lodash"
+      ],
+      [
+        "antd",
+        {
+          "libraryName": "antd",
+          "libraryDirectory": "lib"
+        }
+      ]
     ],
     "env": {
       "production": {
@@ -265,6 +273,8 @@
     "karma-safari-launcher": "1.0.0",
     "karma-sourcemap-loader": "0.3.7",
     "karma-webpack": "1.8.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "lint-staged": "2.0.3",
     "lodash-webpack-plugin": "^0.10.0",
     "minimist": "1.2.0",
