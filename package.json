@@ -20,7 +20,7 @@
     "postinstall": "npm run build:dll",
     "prebuild": "npm run build:clean && npm run test",
     "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p || true",
-    "build:only": "NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p || true",
+    "build:only": "npm run build:clean && NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p || true",
     "build:clean": "npm run test:clean && rimraf ./build",
     "build:dll": "node ./internals/scripts/dependencies.js",
     "start": "cross-env NODE_ENV=development webpack-dashboard -- node server",

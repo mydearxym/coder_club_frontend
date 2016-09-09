@@ -81,8 +81,9 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
         <h2 className={styles.base_on_theme}>base_on_theme</h2>
 
         <div className={"theme_light"}>
-          <h2 >light/dark theme</h2>
-          <Tag closable color="blue">蓝色</Tag>
+          <h2>his h2</h2>
+          <div className={"tlable"}>-light/dark theme?</div>
+          <Tag color="blue">蓝色</Tag>
           <AButton type="primary">Hello</AButton>
         </div>
 

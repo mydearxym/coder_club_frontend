@@ -6,8 +6,14 @@ body {
   width: 100%;
 }
 
+
+html {
+  font-size: 62.5% !important;
+}
+
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+  font-size: 1.4rem !important;
 }
 
 body.fontLoaded {

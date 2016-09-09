@@ -3,6 +3,14 @@ $red: tomato;
 
 :global(.theme_light) {
 
+  :global(.tlable) {
+    color: blue;
+  }
+
+ :global(h2){
+    color: tomato;
+  }
+
   :global(.ant-btn-primary) {
     color: white;
     background-color: tomato;
@@ -12,16 +20,6 @@ $red: tomato;
 
 :global(.theme_dark) {
   :global(.ant-btn-primary) {
-    color: white;
-    background-color: yellowgreen;
-    border-color: darken(yellowgreen, 10%);
-  }
-}
-
-
-
-.theme_dark {
-  .ant-btn-primary {
     color: white;
     background-color: yellowgreen;
     border-color: darken(yellowgreen, 10%);
