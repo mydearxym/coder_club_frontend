@@ -22,6 +22,7 @@ module.exports = {
       { test: /\.json$/, loader: 'json-loader' },
       { test: /\.css$/, loader: 'null-loader' },
       { test: /\.scss$/, loader: ['style-loader', 'css-loader', 'sass-loader'] },
+      { test: /\.less$/, loader: ['style-loader', 'css-loader', 'less-loader'] },
 
       // sinon.js--aliased for enzyme--expects/requires global vars.
       // imports-loader allows for global vars to be injected into the module.

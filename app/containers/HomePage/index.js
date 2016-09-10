@@ -33,6 +33,7 @@ import LoadingIndicator from 'components/LoadingIndicator';
 
 /* import { Tag } from 'antd';*/
 import Tag from 'antd/lib/tag';
+require('antd/lib/tag/style');
 
 import styles from './styles.css';
 

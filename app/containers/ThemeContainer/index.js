@@ -13,7 +13,10 @@ import styles from './styles.scss';
 
 import ThemeLabel from 'components/ThemeLabel';
 import Button from 'components/Button';
-import { Button as AButton } from 'antd';
+import { default as AButton } from 'antd/lib/button';
+require('antd/lib/button/style');
+import Tag from 'antd/lib/tag';
+require('antd/lib/tag/style');
 
 import themeLight from './theme-light.css';
 import themeDark from './theme-dark.css';
@@ -78,7 +81,9 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
         <h2 className={styles.base_on_theme}>base_on_theme</h2>
 
         <div className={"theme_light"}>
-          <h2 >light/dark theme</h2>
+          <h2>his h2</h2>
+          <div className={"tlable"}>-light/dark theme?</div>
+          <Tag color="blue">蓝色</Tag>
           <AButton type="primary">Hello</AButton>
         </div>
 
