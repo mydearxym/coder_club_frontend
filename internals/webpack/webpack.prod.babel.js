@@ -6,11 +6,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
-// PostCSS plugins
-const cssnext = require('postcss-cssnext');
-const postcssFocus = require('postcss-focus');
-const postcssReporter = require('postcss-reporter');
-
 module.exports = require('./webpack.base.babel')({
   // In production, we skip all hot-reloading stuff
   entry: [
@@ -30,16 +25,6 @@ module.exports = require('./webpack.base.babel')({
     loader: 'css-loader?modules&-autoprefixer&importLoaders=1!postcss-loader!sass-loader',
   }),
 
-  // In production, we minify our CSS with cssnano
-  postcssPlugins: [
-    postcssFocus(),
-    cssnext({
-      browsers: ['last 2 versions', 'IE > 10'],
-    }),
-    postcssReporter({
-      clearMessages: true,
-    }),
-  ],
   plugins: [
     new LodashModuleReplacementPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
