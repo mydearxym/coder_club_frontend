@@ -88,16 +88,16 @@ export class HomePage extends React.Component {
       mainContent = (<List component={ErrorComponent} />);
     // If we're not loading, don't have an error and there are repos, show the repos
     } else if (this.props.repos !== false) {
-      mainContent = (<List items={this.props.repos} component={RepoListItem} />);
+      mainContent = (<List component={RepoListItem} items={this.props.repos} />);
     }
 
     return (
       <article>
         <Helmet
-          title="Home Page"
           meta={[
             { name: 'description', content: 'A React.js Boilerplate application homepage' },
           ]}
+          title="Home Page"
         />
 
         <Tag closable color="blue">蓝色</Tag>
@@ -116,10 +116,10 @@ export class HomePage extends React.Component {
               <label htmlFor="username">Show Github repositories by
                 <span className={styles.atPrefix}>@</span>
                 <input
-                  id="username"
                   className={styles.input}
-                  type="text"
+                  id="username"
                   placeholder="mxstbr"
+                  type="text"
                   value={this.props.username}
                   onChange={this.props.onChangeUsername}
                 />

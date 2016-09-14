@@ -150,10 +150,23 @@
       "prefer-template": 2,
       "react/jsx-filename-extension": 0,
       "react/jsx-no-target-blank": 0,
+      "react/forbid-component-props": 1,
+      "react/jsx-boolean-value": 2,
       "react/require-extension": 0,
+      "react/jsx-indent-props": [2, 2],
+      "react/jsx-max-props-per-line": [1, {"maximum": 2}],
+      "react/jsx-sort-props": [1, {
+        "callbacksLast": true,
+        "ignoreCase": false
+      }],
+      "react/jsx-key": 1,
+      "react/jsx-pascal-case": 1,
+      "react/jsx-wrap-multilines": [1, {"declaration": true, "assignment": false, "return": true}],
+      "react/jsx-no-bind": 0,
+      "react/no-unused-prop-types": 1,
+      "react/jsx-no-duplicate-props": 2,
       "react/self-closing-comp": 0,
-      "require-yield": 0,
-      "react/jsx-no-bind": 0
+      "require-yield": 0
     },
     "settings": {
       "import/resolver": {
