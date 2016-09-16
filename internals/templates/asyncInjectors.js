@@ -1,7 +1,7 @@
 import invariant from 'invariant';
 import createReducer from 'reducers';
 
-export const isType = type => target => typeof target === type;
+export const isType = (type) => (target) => typeof target === type;
 export const isFunction = isType('function');
 
 /**
