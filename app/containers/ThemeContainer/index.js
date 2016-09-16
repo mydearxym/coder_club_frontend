@@ -84,7 +84,7 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
 
         <h2 className={styles.base_on_theme}>base_on_theme</h2>
 
-        <div className={"theme_light"}>
+        <div className={"theme-light"}>
           <h2>his h2</h2>
           <div className={"tlable"}>-light/dark theme?</div>
           <Tag color="blue">蓝色</Tag>
@@ -92,7 +92,6 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
         </div>
 
         <h2 className={styles.sass_color}>ouside sassman</h2>
-        <h2 className="sass_color">global sassman</h2>
         <h1 className={styles.hide_on_tv}>hide_on_tv</h1>
 
         <div className={styles.themeContainer}>
