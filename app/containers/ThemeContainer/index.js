@@ -29,11 +29,11 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
       cur_theme: '',
     };
   }
-
-  componentDidMount() {
-    /* console.log('componentsDidMount')*/
-  }
-
+  /*
+   *   componentDidMount() {
+   *     console.log('componentsDidMount');
+   *   }
+   * */
   openRoute = (route) => {
     /* console.log('openRoute3');*/
     /* debugger*/
@@ -50,6 +50,9 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
 
   diekhandleChange() {
     console.log('handleChange');
+    this.setState({
+      hello: '',
+    });
   }
 
   switchTheme(theme) {

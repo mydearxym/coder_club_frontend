@@ -55,7 +55,7 @@ module.exports = require('./webpack.base.babel')({
   /* devtool: 'cheap-source-map',*/
   /* devtool: 'source-map',*/
   /* devtool: 'eval-source-map',*/
-  devtool: 'eval',
+  devtool: 'cheap-module-eval-source-map',
 });
 
 /**
