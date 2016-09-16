@@ -34,14 +34,14 @@ describe('<RepoListItem />', () => {
 
   it('should not render the current username', () => {
     const renderedComponent = mount(
-      <RepoListItem item={item} currentUser={item.owner.login} />
+      <RepoListItem currentUser={item.owner.login} item={item} />
     );
     expect(renderedComponent.text().indexOf(item.owner.login)).toBeLessThan(0);
   });
 
   it('should render usernames that are not the current one', () => {
     const renderedComponent = mount(
-      <RepoListItem item={item} currentUser="nikgraf" />
+      <RepoListItem currentUser="nikgraf" item={item} />
     );
     expect(renderedComponent.text().indexOf(item.owner.login)).toBeGreaterThan(-1);
   });

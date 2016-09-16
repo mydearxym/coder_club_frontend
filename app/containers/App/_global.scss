@@ -1,7 +1,7 @@
 
 $red: tomato;
 
-:global(.theme_light) {
+:global(.theme-light) {
 
   :global(.tlable) {
     color: blue;
@@ -18,7 +18,7 @@ $red: tomato;
   }
 }
 
-:global(.theme_dark) {
+:global(.theme-dark) {
   :global(.ant-btn-primary) {
     color: white;
     background-color: yellowgreen;

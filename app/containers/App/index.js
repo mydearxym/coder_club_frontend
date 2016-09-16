@@ -30,11 +30,11 @@ function App(props) {
   return (
     <div className={styles.wrapper}>
       <Helmet
-        titleTemplate="%s - React.js Boilerplate"
         defaultTitle="React.js Boilerplate"
         meta={[
           { name: 'description', content: 'A React.js Boilerplate application' },
         ]}
+        titleTemplate="%s - React.js Boilerplate"
       />
 
       <h1>React 最佳实践!</h1>

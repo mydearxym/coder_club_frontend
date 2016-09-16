@@ -19,7 +19,7 @@ describe('<List />', () => {
       'World',
     ];
     const renderedComponent = render(
-      <List items={items} component={ListItem} />
+      <List component={ListItem} items={items} />
     );
     expect(renderedComponent.find(items)).toExist();
   });

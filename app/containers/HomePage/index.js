@@ -88,22 +88,22 @@ export class HomePage extends React.Component {
       mainContent = (<List component={ErrorComponent} />);
     // If we're not loading, don't have an error and there are repos, show the repos
     } else if (this.props.repos !== false) {
-      mainContent = (<List items={this.props.repos} component={RepoListItem} />);
+      mainContent = (<List component={RepoListItem} items={this.props.repos} />);
     }
 
     return (
       <article>
         <Helmet
-          title="Home Page"
           meta={[
             { name: 'description', content: 'A React.js Boilerplate application homepage' },
           ]}
+          title="Home Page"
         />
 
-        <Tag closable color="blue">蓝色</Tag>
-        <Tag closable color="green">绿色</Tag>
-        <Tag closable color="yellow"><a href="https://github.com/ant-design/ant-design/issues/1862">黄色</a></Tag>
-        <Tag closable color="red">红色</Tag>
+        <Tag color="blue" closable>蓝色</Tag>
+        <Tag color="green" closable>绿色</Tag>
+        <Tag color="yellow" closable><a href="https://github.com/ant-design/ant-design/issues/1862">黄色</a></Tag>
+        <Tag color="red" closable>红色</Tag>
 
         <div>
           <section className={`${styles.textSection} ${styles.centered}`}>
@@ -116,10 +116,10 @@ export class HomePage extends React.Component {
               <label htmlFor="username">Show Github repositories by
                 <span className={styles.atPrefix}>@</span>
                 <input
-                  id="username"
                   className={styles.input}
-                  type="text"
+                  id="username"
                   placeholder="mxstbr"
+                  type="text"
                   value={this.props.username}
                   onChange={this.props.onChangeUsername}
                 />

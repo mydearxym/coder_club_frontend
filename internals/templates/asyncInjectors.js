@@ -1,7 +1,7 @@
 import invariant from 'invariant';
 import createReducer from 'reducers';
 
-export const isType = type => target => typeof target === type;
+export const isType = (type) => (target) => typeof target === type;
 export const isFunction = isType('function');
 
 /**
@@ -30,6 +30,7 @@ export function injectAsyncReducer(store, isValid) {
       '(app/utils...) injectAsyncReducer: `asyncReducer` must be a reducer function'
     );
 
+    if (Reflect.has(store.asyncReducers, name)) return;
     store.asyncReducers[name] = asyncReducer; // eslint-disable-line no-param-reassign
     store.replaceReducer(createReducer(store.asyncReducers));
   };

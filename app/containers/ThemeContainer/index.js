@@ -48,6 +48,10 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
     this.openRoute('/');
   };
 
+  diekhandleChange() {
+    console.log('handleChange');
+  }
+
   switchTheme(theme) {
     console.log('switchTheme', theme);
 
@@ -72,15 +76,15 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
     return (
       <div >
         <Helmet
-          title="ThemeContainer"
           meta={[
             { name: 'description', content: 'Description of ThemeContainer' },
           ]}
+          title="ThemeContainer"
         />
 
         <h2 className={styles.base_on_theme}>base_on_theme</h2>
 
-        <div className={"theme_light"}>
+        <div className={"theme-light"}>
           <h2>his h2</h2>
           <div className={"tlable"}>-light/dark theme?</div>
           <Tag color="blue">蓝色</Tag>
@@ -88,19 +92,25 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
         </div>
 
         <h2 className={styles.sass_color}>ouside sassman</h2>
-        <h2 className="sass_color">global sassman</h2>
         <h1 className={styles.hide_on_tv}>hide_on_tv</h1>
 
         <div className={styles.themeContainer}>
           <h2 className={styles.sass_color}>i am sass man</h2>
-          <div className="theme_green">theme green</div>
+          <div className="theme_green">theme green!</div>
+          <input onChange={::this.diekhandleChange} />
           <div className="theme_tomato">theme tomato</div>
 
           <span><Button onClick={this.switchTheme.bind(this, 'A')}>theme A</Button></span>
           <span><Button onClick={this.switchTheme.bind(this, 'B')}>theme B</Button></span>
 
           <h2>ThemeLabel</h2>
-          <ThemeLabel theme={curTheme} />
+
+          <div>
+            <ThemeLabel
+              hello={false}
+              theme={curTheme}
+            />
+          </div>
           <Button handleRoute={this.openHomePage}>Home</Button>
         </div>
       </div>

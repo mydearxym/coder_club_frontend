@@ -50,7 +50,7 @@ export class RepoListItem extends React.Component { // eslint-disable-line react
 
     // Render the content into a list item
     return (
-      <ListItem key={`repo-list-item-${item.full_name}`} item={content} />
+      <ListItem item={content} key={`repo-list-item-${item.full_name}`} />
     );
   }
 }

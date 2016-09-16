@@ -22,8 +22,8 @@ describe('<HomePage />', () => {
   it('should render an error if loading failed', () => {
     const renderedComponent = mount(
       <HomePage
-        loading={false}
         error={{ message: 'Loading failed!' }}
+        loading={false}
       />
     );
     expect(
@@ -45,12 +45,12 @@ describe('<HomePage />', () => {
     }];
     const renderedComponent = shallow(
       <HomePage
-        repos={repos}
         error={false}
+        repos={repos}
       />
     );
 
-    expect(renderedComponent.contains(<List items={repos} component={RepoListItem} />)).toEqual(true);
+    expect(renderedComponent.contains(<List component={RepoListItem} items={repos} />)).toEqual(true);
   });
 
   it('should link to /features', () => {
@@ -64,7 +64,7 @@ describe('<HomePage />', () => {
     };
 
     const renderedComponent = mount(
-      <HomePage loading changeRoute={openRoute} />
+      <HomePage changeRoute={openRoute} loading />
     );
     /* const button = renderedComponent.find('.feature_page_button');*/
     const button = renderedComponent.find('button').at(0);
