@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './styles.css';
 
 function ListItem(props) {
+  /* console.log("props.item", props.item);*/
   return (
     <li className={props.className || styles.item}>
       <div className={styles.itemContent}>
