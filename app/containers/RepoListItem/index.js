@@ -19,7 +19,9 @@ import styles from './styles.css';
 export class RepoListItem extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     /* const item = this.props.item;*/
-    const currentUser = this.props.currentUser;
+    /* const { item } = this.props.item*/
+    const { currentUser } = this.props;
+    /* const name = this.props.name;*/
     let nameprefix = '';
 
     // If the repository is owned by a different person than we got the data for
