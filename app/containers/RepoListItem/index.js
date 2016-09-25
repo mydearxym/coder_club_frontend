@@ -4,7 +4,7 @@
  * Lists the name and the issue count of a repository
  */
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 
@@ -58,25 +58,23 @@ export class RepoListItem extends React.Component { // eslint-disable-line react
   }
 }
 
-/* const itemShape = React.PropTypes.shape({*/
-  /* name: React.PropTypes.string,*/
-  /* owner: React.PropTypes.object,*/
-  /* html_url: React.PropTypes.string,*/
-  /* full_name: React.PropTypes.string,*/
-  /* open_issues_count: React.PropTypes.number,*/
+/* const itemShape = PropTypes.shape({*/
+  /* name: PropTypes.string,*/
+  /* owner: PropTypes.object,*/
+  /* html_url: PropTypes.string,*/
+  /* full_name: PropTypes.string,*/
+  /* open_issues_count: PropTypes.number,*/
   /* });*/
 
 RepoListItem.propTypes = {
   item: React.PropTypes.shape({
-    name: React.PropTypes.string,
-    owner: React.PropTypes.object.isRequired,
-    html_url: React.PropTypes.string,
-    full_name: React.PropTypes.string,
-    open_issues_count: React.PropTypes.number,
+    name: PropTypes.string,
+    owner: PropTypes.object.isRequired,
+    html_url: PropTypes.string,
+    full_name: PropTypes.string,
+    open_issues_count: PropTypes.number,
   }),
-  /* item: itemShape,*/
-  /* item: React.PropTypes.object,*/
-  currentUser: React.PropTypes.string,
+  currentUser: PropTypes.string,
 };
 
 export default connect(createSelector(

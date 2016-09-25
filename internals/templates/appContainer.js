@@ -11,14 +11,14 @@
  * the linting exception.
  */
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import styles from './styles.css';
 
 export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   static propTypes = {
-    children: React.PropTypes.node,
+    children: PropTypes.node,
   };
 
   render() {

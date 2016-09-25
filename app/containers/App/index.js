@@ -6,7 +6,7 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Helmet from 'react-helmet';
 
 // Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
@@ -46,7 +46,7 @@ function App(props) {
 }
 
 App.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 export default App;

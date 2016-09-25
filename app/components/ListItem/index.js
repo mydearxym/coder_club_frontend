@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import styles from './styles.css';
 
@@ -14,8 +14,8 @@ function ListItem(props) {
 }
 
 ListItem.propTypes = {
-  className: React.PropTypes.string,
-  item: React.PropTypes.any,
+  className: PropTypes.string,
+  item: PropTypes.any,
 };
 
 export default ListItem;

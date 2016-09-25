@@ -3,7 +3,7 @@
  *
  * List all the features
  */
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import Helmet from 'react-helmet';
@@ -82,7 +82,7 @@ export class FeaturePage extends React.Component {
 }
 
 FeaturePage.propTypes = {
-  dispatch: React.PropTypes.func,
+  dispatch: PropTypes.func,
 };
 
 export default connect()(FeaturePage);
