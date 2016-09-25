@@ -4,7 +4,7 @@
  * This is the page we show when the user visits a url that doesn't have a route
  */
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 
@@ -27,7 +27,7 @@ export function NotFound(props) {
 }
 
 NotFound.propTypes = {
-  dispatch: React.PropTypes.func,
+  dispatch: PropTypes.func,
 };
 
 // Wrap the component to inject dispatch and state into it

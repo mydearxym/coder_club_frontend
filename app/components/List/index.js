@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import styles from './styles.css';
 
@@ -26,8 +26,8 @@ function List(props) {
 }
 
 List.propTypes = {
-  component: React.PropTypes.func.isRequired,
-  items: React.PropTypes.arrayOf(React.PropTypes.object),
+  component: PropTypes.func.isRequired,
+  items: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default List;

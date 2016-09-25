@@ -4,7 +4,7 @@
  *
  */
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 
@@ -122,7 +122,7 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
 }
 
 ThemeContainer.propTypes = {
-  changeRoute: React.PropTypes.func,
+  changeRoute: PropTypes.func,
 };
 
 function mapDispatchToProps(dispatch) {

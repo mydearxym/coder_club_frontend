@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 function IssueIcon(props) {
   return (
@@ -13,7 +13,7 @@ function IssueIcon(props) {
 }
 
 IssueIcon.propTypes = {
-  className: React.PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default IssueIcon;
