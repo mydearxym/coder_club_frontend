@@ -270,7 +270,7 @@
     "babel-preset-stage-0": "6.5.0",
     "chai": "3.5.0",
     "chai-enzyme": "0.5.1",
-    "cheerio": "0.22.0",
+    "cheerio": "0.20.0",
     "coveralls": "2.11.14",
     "css-loader": "0.25.0",
     "enzyme": "2.4.1",
