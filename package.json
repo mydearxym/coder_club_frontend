@@ -106,6 +106,7 @@
       "es6": true
     },
     "plugins": [
+      "redux-saga",
       "react",
       "jsx-a11y"
     ],
@@ -172,6 +173,8 @@
       "react/no-unused-prop-types": 1,
       "react/jsx-no-duplicate-props": 2,
       "react/self-closing-comp": 0,
+      "redux-saga/no-yield-in-race": 2,
+      "redux-saga/yield-effects": 2,
       "require-yield": 0
     },
     "settings": {
@@ -280,6 +283,7 @@
     "eslint-plugin-import": "1.16.0",
     "eslint-plugin-jsx-a11y": "2.2.2",
     "eslint-plugin-react": "6.3.0",
+    "eslint-plugin-redux-saga": "0.1.4",
     "eventsource-polyfill": "0.9.6",
     "expect": "1.20.2",
     "expect-jsx": "2.6.0",
