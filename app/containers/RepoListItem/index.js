@@ -16,7 +16,7 @@ import A from 'components/A';
 
 import styles from './styles.css';
 
-export class RepoListItem extends React.Component { // eslint-disable-line react/prefer-stateless-function
+export class RepoListItem extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     /* const item = this.props.item;*/
     /* const { item } = this.props.item*/

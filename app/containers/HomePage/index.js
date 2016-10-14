@@ -37,7 +37,7 @@ require('antd/lib/tag/style');
 
 import styles from './styles.css';
 
-export class HomePage extends React.Component {
+export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
     this.state = {
