@@ -1,5 +1,6 @@
 @import "../App/global";
 @import "../App/mq";
+@import '../App/colors.scss';
 
 
 $theTomato: orange;
@@ -12,6 +13,14 @@ $theTomato: orange;
     }
 }
 
+.base_on_theme {
+  color: var(--color-accent);
+  /* color: red; */
+  /* composes: theme_dark from './theme.css'; */
+  display: block;
+}
+
+
 .themeContainer {
   .theme_red {
     color: tomato;
@@ -19,15 +28,6 @@ $theTomato: orange;
 
   .sass_color {
     color: tomato;
-  }
-
-  .fuck {
-    color: red;
-  }
-
-  .base_on_theme {
-    /* composes: theme_dark from './theme.css'; */
-    display: block;
   }
 
 }
