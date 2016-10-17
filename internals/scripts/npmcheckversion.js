@@ -1,5 +1,5 @@
-/* eslint-disable */
-var exec = require('child_process').exec;
+const exec = require('child_process').exec;
+
 exec('npm -v', function (err, stdout, stderr) {
   if (err) throw err;
   if (parseFloat(stdout) < 3) {
