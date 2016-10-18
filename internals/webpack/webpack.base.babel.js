@@ -88,6 +88,10 @@ module.exports = (options) => ({
     }),
   ],
   resolve: {
+    alias: {
+      react: 'react-lite',
+      'react-dom': 'react-lite',
+    },
     modules: ['app', 'node_modules'],
     extensions: [
       '',
