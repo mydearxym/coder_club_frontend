@@ -12,6 +12,12 @@ module.exports = require('./webpack.base.babel')({
     path.join(process.cwd(), 'app/app.js'),
   ],
 
+  // use react-lite for production
+  alias: {
+    react: 'react-lite',
+    'react-dom': 'react-lite',
+  },
+
   // Utilize long-term caching by adding content hashes (not compilation hashes) to compiled assets
   output: {
     filename: '[name].[chunkhash].js',
