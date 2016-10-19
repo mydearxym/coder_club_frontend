@@ -202,7 +202,7 @@
       ],
       "react/jsx-no-bind": 0,
       "react/no-unused-prop-types": 1,
-      "react/no-unescaped-entities": 1,
+      "react/no-unescaped-entities": 0,
       "react/jsx-no-duplicate-props": 2,
       "react/self-closing-comp": 0,
       "redux-saga/no-yield-in-race": 2,
