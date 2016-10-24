@@ -18,6 +18,8 @@ require('antd/lib/button/style');
 import Tag from 'antd/lib/tag';
 require('antd/lib/tag/style');
 
+import { debounce } from 'react-decoration';
+
 import themeLight from './theme-light.css';
 import themeDark from './theme-dark.css';
 
@@ -71,6 +73,11 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
     });
   }
 
+  @debounce(500, true)
+  handleDebounce() {
+    console.log('handleDebounce');
+  }
+
   render() {
     const curTheme = this.state.cur_theme || themeDark;
 
@@ -88,6 +95,7 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
         <h2 className={styles.base_on_theme}>base_on_theme</h2>
 
         <div className={'theme-light'}>
+          <AButton onClick={this.handleDebounce}>test debounce</AButton>
           <h2>his h2</h2>
           <div className={'tlable'}>-light/dark theme?</div>
           <Tag color="blue">蓝色</Tag>
