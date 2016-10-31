@@ -18,7 +18,9 @@ require('antd/lib/button/style');
 import Tag from 'antd/lib/tag';
 require('antd/lib/tag/style');
 
-import { throttle } from 'react-decoration';
+/* import { throttle } from 'react-decoration';*/
+import throttle from 'react-decoration/lib/decorators/functions/throttle';
+import debounce from 'react-decoration/lib/decorators/functions/debounce';
 
 import themeLight from './theme-light.css';
 import themeDark from './theme-dark.css';
@@ -57,6 +59,7 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
     });
   }
 
+  @debounce(500, true)
   switchTheme(theme) {
     console.log('switchTheme', theme);
 
