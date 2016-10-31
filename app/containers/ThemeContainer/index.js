@@ -18,7 +18,7 @@ require('antd/lib/button/style');
 import Tag from 'antd/lib/tag';
 require('antd/lib/tag/style');
 
-import { debounce } from 'react-decoration';
+import { throttle } from 'react-decoration';
 
 import themeLight from './theme-light.css';
 import themeDark from './theme-dark.css';
@@ -73,7 +73,8 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
     });
   }
 
-  @debounce(500, true)
+  @throttle(500, { trailing: false })
+  /* @debounce(500, true)*/
   handleDebounce() {
     console.log('handleDebounce');
   }
