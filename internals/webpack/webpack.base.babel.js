@@ -75,28 +75,34 @@ module.exports = (options) => ({
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
     }),
-    // Namedmodulesplugin
     new webpack.NamedModulesPlugin(),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        // 'context' needed for css-loader see
+        // https://github.com/mxstbr/react-boilerplate/pull/1032#issuecomment-249821676
+        context: __dirname,
+        postcss: () => [
+          postcssFocus(), // Add a :focus to every :hover
+          cssnext({ // Allow future CSS features to be used, also auto-prefixes the CSS...
+            browsers: ['last 2 versions', 'IE > 10'], // ...based on this browser list
+          }),
+          postcssReporter({ // Posts messages from plugins to the terminal
+            clearMessages: true,
+          }),
+        ],
+      },
+    }),
   ]),
-  postcss: () => [
-    postcssFocus(), // Add a :focus to every :hover
-    cssnext({ // Allow future CSS features to be used, also auto-prefixes the CSS...
-      browsers: ['last 2 versions', 'IE > 10'], // ...based on this browser list
-    }),
-    postcssReporter({ // Posts messages from plugins to the terminal
-      clearMessages: true,
-    }),
-  ],
   resolve: {
     alias: options.alias,
     modules: ['app', 'node_modules'],
     extensions: [
-      '',
       '.js',
       '.jsx',
       '.react.js',
     ],
     mainFields: [
+      'browser',
       'jsnext:main',
       'browser',
       'main',
@@ -104,5 +110,4 @@ module.exports = (options) => ({
   },
   devtool: options.devtool,
   target: 'web', // Make web variables accessible to webpack, e.g. window
-  progress: true,
 });

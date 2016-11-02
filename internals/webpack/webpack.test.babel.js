@@ -71,7 +71,6 @@ module.exports = {
     'react/lib/ReactContext': 'window',
   },
   resolve: {
-    modulesDirectories: modules,
     modules,
     alias: {
       // required for enzyme to work properly
