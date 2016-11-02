@@ -7444,6 +7444,10 @@ qjobs@^1.1.4:
   version "1.1.5"
   resolved "http://registry.npm.taobao.org/qjobs/download/qjobs-1.1.5.tgz#659de9f2cf8dcc27a1481276f205377272382e73"
 
+qrcode-terminal:
+  version "0.11.0"
+  resolved "http://registry.cnpmjs.org/qrcode-terminal/download/qrcode-terminal-0.11.0.tgz#ffc6c28a2fc0bfb47052b47e23f4f446a5fbdb9e"
+
 qs@~6.1.0:
   version "6.1.0"
   resolved "http://registry.npm.taobao.org/qs/download/qs-6.1.0.tgz#ec1d1626b24278d99f0fdf4549e524e24eceeb26"
