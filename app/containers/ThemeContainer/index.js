@@ -13,10 +13,15 @@ import styles from './styles.scss';
 
 import ThemeLabel from 'components/ThemeLabel';
 import Button from 'components/Button';
-import { default as AButton } from 'antd/lib/button';
-require('antd/lib/button/style');
-import Tag from 'antd/lib/tag';
-require('antd/lib/tag/style');
+
+/* import { Tag, Button as AButton } from 'antd';*/
+
+/* import { default as AButton } from 'antd/lib/button';*/
+/* require('antd/lib/button/style');*/
+
+/* import Tag from 'antd/lib/tag';*/
+/* import 'antd/lib/tag/style/css';*/
+/* require('antd/lib/tag/style');*/
 
 /* import { throttle } from 'react-decoration';*/
 import throttle from 'react-decoration/lib/decorators/functions/throttle';
@@ -99,11 +104,10 @@ export class ThemeContainer extends React.Component { // eslint-disable-line rea
         <h2 className={styles.base_on_theme}>base_on_theme</h2>
 
         <div className={'theme-light'}>
-          <AButton onClick={this.handleDebounce}>test debounce</AButton>
+          {/* <AButton onClick={this.handleDebounce}>test debounce</AButton> */}
           <h2>his h2</h2>
           <div className={'tlable'}>-light/dark theme?</div>
-          <Tag color="blue">蓝色</Tag>
-          <AButton type="primary">Hello</AButton>
+          {/* <AButton type="primary">Hello</AButton> */}
         </div>
 
         <h2 className={styles.sass_color}>ouside sassman</h2>
