@@ -1,4 +1,3 @@
-import expect from 'expect';
 import { shallow } from 'enzyme';
 import React from 'react';
 
@@ -14,7 +13,7 @@ describe('<Footer />', () => {
       <section>
         <p>This project is licensed under the MIT license.</p>
       </section>
-    )).toEqual(true);
+    )).toBe(true);
   });
 
   it('should render the credits', () => {
@@ -23,6 +22,6 @@ describe('<Footer />', () => {
       <section>
         <p>Made with love by <A href="https://twitter.com/mxstbr">Max Stoiber</A>.</p>
       </section>
-    )).toEqual(true);
+    )).toBe(true);
   });
 });

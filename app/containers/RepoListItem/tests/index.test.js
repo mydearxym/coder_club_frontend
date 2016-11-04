@@ -2,7 +2,6 @@
  * Test the repo list item
  */
 
-import expect from 'expect';
 import { shallow, mount } from 'enzyme';
 import React from 'react';
 
@@ -29,41 +28,41 @@ describe('<RepoListItem />', () => {
     const renderedComponent = shallow(
       <RepoListItem item={item} />
     );
-    expect(renderedComponent.find(ListItem).length).toEqual(1);
+    expect(renderedComponent.find(ListItem).length).toBe(1);
   });
 
   it('should not render the current username', () => {
     const renderedComponent = mount(
       <RepoListItem currentUser={item.owner.login} item={item} />
     );
-    expect(renderedComponent.text().indexOf(item.owner.login)).toBeLessThan(0);
+    expect(renderedComponent.text()).not.toContain(item.owner.login);
   });
 
   it('should render usernames that are not the current one', () => {
     const renderedComponent = mount(
       <RepoListItem currentUser="nikgraf" item={item} />
     );
-    expect(renderedComponent.text().indexOf(item.owner.login)).toBeGreaterThan(-1);
+    expect(renderedComponent.text()).toContain(item.owner.login);
   });
 
   it('should render the repo name', () => {
     const renderedComponent = mount(
       <RepoListItem item={item} />
     );
-    expect(renderedComponent.text().indexOf(item.name)).toBeGreaterThan(-1);
+    expect(renderedComponent.text()).toContain(item.name);
   });
 
   it('should render the issue count', () => {
     const renderedComponent = mount(
       <RepoListItem item={item} />
     );
-    expect(renderedComponent.text().indexOf(item.open_issues_count)).toBeGreaterThan(1);
+    expect(renderedComponent.text()).toContain(item.open_issues_count);
   });
 
   it('should render the IssueIcon', () => {
     const renderedComponent = mount(
       <RepoListItem item={item} />
     );
-    expect(renderedComponent.find('svg').length).toEqual(1);
+    expect(renderedComponent.find('svg').length).toBe(1);
   });
 });

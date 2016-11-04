@@ -39,14 +39,6 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       },
     }, {
-      path: '/features',
-      name: 'features',
-      getComponent(nextState, cb) {
-        System.import('containers/FeaturePage')
-          .then(loadModule(cb))
-          .catch(errorLoading);
-      },
-    }, {
       path: 'theme',
       getComponent(location, cb) {
         System.import('containers/ThemeContainer')

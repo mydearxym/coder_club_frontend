@@ -44,7 +44,7 @@ module.exports = require('./webpack.base.babel')({
 
   // Tell babel that we want to hot-reload
   babelQuery: {
-    presets: ['react-hmre'],
+    presets: ['babel-preset-react-hmre'].map(require.resolve),
     plugins: ['lodash'],
   },
 
