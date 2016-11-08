@@ -1,8 +1,9 @@
-import App from '../index';
-import Footer from 'components/Footer';
 
 import { shallow } from 'enzyme';
 import React from 'react';
+
+import Footer from 'components/Footer';
+import App from '../index';
 
 describe('<App />', () => {
   /* it('should render the logo', () => {*/

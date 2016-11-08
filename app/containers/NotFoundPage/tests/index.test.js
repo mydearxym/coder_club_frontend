@@ -5,8 +5,8 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { NotFound } from '../index';
 import H1 from 'components/H1';
+import { NotFound } from '../index';
 
 describe('<NotFound />', () => {
   it('should render the Page Not Found text', () => {

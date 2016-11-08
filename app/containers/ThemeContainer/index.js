@@ -9,7 +9,6 @@ import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 
 import Helmet from 'react-helmet';
-import styles from './styles.scss';
 
 import ThemeLabel from 'components/ThemeLabel';
 import Button from 'components/Button';
@@ -26,6 +25,8 @@ import Button from 'components/Button';
 /* import { throttle } from 'react-decoration';*/
 import throttle from 'react-decoration/lib/decorators/functions/throttle';
 import debounce from 'react-decoration/lib/decorators/functions/debounce';
+
+import styles from './styles.scss';
 
 import themeLight from './theme-light.css';
 import themeDark from './theme-dark.css';
