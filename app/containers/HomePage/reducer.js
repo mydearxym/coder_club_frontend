@@ -10,10 +10,11 @@
  *   return state.set('yourStateVariable', true);
  */
 
+import { fromJS } from 'immutable';
+
 import {
   CHANGE_USERNAME,
 } from './constants';
-import { fromJS } from 'immutable';
 
 // The initial state of the App
 const initialState = fromJS({

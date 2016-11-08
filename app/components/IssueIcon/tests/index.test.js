@@ -1,7 +1,8 @@
-import IssueIcon from '../index';
 
 import { shallow } from 'enzyme';
 import React from 'react';
+
+import IssueIcon from '../index';
 
 describe('<IssueIcon />', () => {
   it('should render a SVG', () => {

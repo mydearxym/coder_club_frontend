@@ -1,7 +1,8 @@
-import ListItem from '../index';
 
 import { mount } from 'enzyme';
 import React from 'react';
+
+import ListItem from '../index';
 
 describe('<ListItem />', () => {
   it('should have a className', () => {

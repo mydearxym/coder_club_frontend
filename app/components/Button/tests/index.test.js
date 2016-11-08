@@ -2,10 +2,10 @@
  * Testing our Button component
  */
 
-import Button from '../index';
-
 import { shallow } from 'enzyme';
 import React from 'react';
+
+import Button from '../index';
 
 const handleRoute = () => {};
 const href = 'http://mxstbr.com';

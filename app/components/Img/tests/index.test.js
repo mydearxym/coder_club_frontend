@@ -1,7 +1,8 @@
-import Img from '../index';
 
 import { shallow } from 'enzyme';
 import React from 'react';
+
+import Img from '../index';
 
 const src = 'test.png';
 const alt = 'test';
