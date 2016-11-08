@@ -198,7 +198,7 @@
       "react/jsx-no-duplicate-props": 2,
       "react/self-closing-comp": 0,
       "redux-saga/no-yield-in-race": 2,
-      "redux-saga/yield-effects": 2,
+      "redux-saga/yield-effects": 1,
       "require-yield": 0
     },
     "settings": {
