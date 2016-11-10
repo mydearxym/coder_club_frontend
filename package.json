@@ -7,7 +7,7 @@
     "url": "git://github.com/mydearxym/coder_club_frontend.git"
   },
   "engines": {
-    "npm": ">=3"
+    "npm": ">=5"
   },
   "author": "Max Stoiber",
   "license": "MIT",
