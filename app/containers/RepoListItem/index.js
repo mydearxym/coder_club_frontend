@@ -6,7 +6,7 @@
 
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
+import { createStructuredSelector } from 'reselect';
 
 import { selectCurrentUser } from 'containers/App/selectors';
 
@@ -77,6 +77,6 @@ RepoListItem.propTypes = {
   currentUser: PropTypes.string,
 };
 
-export default connect(createSelector({
+export default connect(createStructuredSelector({
   currentUser: selectCurrentUser(),
 }))(RepoListItem);
