@@ -22,7 +22,6 @@ import Button from 'components/Button';
 /* import 'antd/lib/tag/style/css';*/
 /* require('antd/lib/tag/style');*/
 
-/* import { throttle } from 'react-decoration';*/
 import throttle from 'react-decoration/lib/decorators/functions/throttle';
 import debounce from 'react-decoration/lib/decorators/functions/debounce';
 
