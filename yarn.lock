@@ -563,9 +563,9 @@ babel-plugin-jest-hoist@^16.0.0:
   version "16.0.0"
   resolved "http://r.cnpmjs.org/babel-plugin-jest-hoist/download/babel-plugin-jest-hoist-16.0.0.tgz#b58ca3f770982a7e7c25b5614b2e57e9dafc6e76"
 
-babel-plugin-lodash@^3.2.8:
+babel-plugin-lodash@3.2.9:
   version "3.2.9"
-  resolved "http://registry.npm.taobao.org/babel-plugin-lodash/download/babel-plugin-lodash-3.2.9.tgz#062f85aa7810fbb4374a1a7372ecc44b09168760"
+  resolved "http://r.cnpmjs.org/babel-plugin-lodash/download/babel-plugin-lodash-3.2.9.tgz#062f85aa7810fbb4374a1a7372ecc44b09168760"
   dependencies:
     glob "^7.0.6"
     lodash "^4.15.0"
@@ -771,15 +771,6 @@ babel-plugin-transform-es2015-modules-amd@^6.8.0:
     babel-runtime "^6.0.0"
     babel-template "^6.8.0"
 
-babel-plugin-transform-es2015-modules-commonjs@^6.11.5:
-  version "6.18.0"
-  resolved "http://r.cnpmjs.org/babel-plugin-transform-es2015-modules-commonjs/download/babel-plugin-transform-es2015-modules-commonjs-6.18.0.tgz#c15ae5bb11b32a0abdcc98a5837baa4ee8d67bcc"
-  dependencies:
-    babel-plugin-transform-strict-mode "^6.18.0"
-    babel-runtime "^6.0.0"
-    babel-template "^6.16.0"
-    babel-types "^6.18.0"
-
 babel-plugin-transform-es2015-modules-commonjs@^6.16.0, babel-plugin-transform-es2015-modules-commonjs@^6.8.0:
   version "6.16.0"
   resolved "http://registry.npm.taobao.org/babel-plugin-transform-es2015-modules-commonjs/download/babel-plugin-transform-es2015-modules-commonjs-6.16.0.tgz#0a34b447bc88ad1a70988b6d199cca6d0b96c892"
@@ -788,6 +779,15 @@ babel-plugin-transform-es2015-modules-commonjs@^6.16.0, babel-plugin-transform-e
     babel-runtime "^6.0.0"
     babel-template "^6.16.0"
     babel-types "^6.16.0"
+
+babel-plugin-transform-es2015-modules-commonjs@6.18.0:
+  version "6.18.0"
+  resolved "http://r.cnpmjs.org/babel-plugin-transform-es2015-modules-commonjs/download/babel-plugin-transform-es2015-modules-commonjs-6.18.0.tgz#c15ae5bb11b32a0abdcc98a5837baa4ee8d67bcc"
+  dependencies:
+    babel-plugin-transform-strict-mode "^6.18.0"
+    babel-runtime "^6.0.0"
+    babel-template "^6.16.0"
+    babel-types "^6.18.0"
 
 babel-plugin-transform-es2015-modules-systemjs@^6.14.0:
   version "6.14.0"
@@ -5199,15 +5199,15 @@ ldjson-stream@^1.2.1:
     split2 "^0.2.1"
     through2 "^0.6.1"
 
-less-loader@^2.2.3:
+less-loader@2.2.3:
   version "2.2.3"
-  resolved "http://registry.npm.taobao.org/less-loader/download/less-loader-2.2.3.tgz#b6d8f8139c8493df09d992a93a00734b08f84528"
+  resolved "http://r.cnpmjs.org/less-loader/download/less-loader-2.2.3.tgz#b6d8f8139c8493df09d992a93a00734b08f84528"
   dependencies:
     loader-utils "^0.2.5"
 
-less@^2.7.1:
+less@2.7.1:
   version "2.7.1"
-  resolved "http://registry.npm.taobao.org/less/download/less-2.7.1.tgz#6cbfea22b3b830304e9a5fb371d54fa480c9d7cf"
+  resolved "http://r.cnpmjs.org/less/download/less-2.7.1.tgz#6cbfea22b3b830304e9a5fb371d54fa480c9d7cf"
   optionalDependencies:
     errno "^0.1.1"
     graceful-fs "^4.1.2"
@@ -5327,11 +5327,11 @@ lodash-es@^4.2.1:
   version "4.16.4"
   resolved "http://registry.npm.taobao.org/lodash-es/download/lodash-es-4.16.4.tgz#4dc3e2cf33a8c343028aa7f7e06d1c9697042599"
 
-lodash-webpack-plugin@^0.10.0:
-  version "0.10.2"
-  resolved "http://registry.npm.taobao.org/lodash-webpack-plugin/download/lodash-webpack-plugin-0.10.2.tgz#161b3082ef4ad19558cefb864bd5d3be70ef852f"
+lodash-webpack-plugin@0.10.5:
+  version "0.10.5"
+  resolved "http://r.cnpmjs.org/lodash-webpack-plugin/download/lodash-webpack-plugin-0.10.5.tgz#d1f0070791c74e46dc74be4913f96645de79f9e5"
   dependencies:
-    lodash "^4.16.4"
+    lodash "^4.16.6"
 
 lodash._arraycopy@^3.0.0:
   version "3.0.0"
@@ -5619,6 +5619,10 @@ lodash.words@^3.0.0:
 lodash@^4.0.0, lodash@^4.1.0, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.16.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.5.1, lodash@^4.6.1:
   version "4.16.4"
   resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.16.4.tgz#01ce306b9bad1319f2a5528674f88297aeb70127"
+
+lodash@^4.16.6:
+  version "4.17.0"
+  resolved "http://r.cnpmjs.org/lodash/download/lodash-4.17.0.tgz#93f4466e5ab73e5a1f1216c34eea11535f0a8df5"
 
 lodash@~4.9.0:
   version "4.9.0"
@@ -6095,9 +6099,9 @@ node-pre-gyp@^0.6.29:
     tar "~2.2.0"
     tar-pack "~3.1.0"
 
-node-sass@^3.8.0:
-  version "3.10.1"
-  resolved "http://registry.npm.taobao.org/node-sass/download/node-sass-3.10.1.tgz#c535b2e1a5439240591e06d7308cb663820d616c"
+node-sass@3.8.0:
+  version "3.8.0"
+  resolved "http://r.cnpmjs.org/node-sass/download/node-sass-3.8.0.tgz#ec0f89ae6625e1d990dc7ff713b275ea15dfee05"
   dependencies:
     async-foreach "^0.1.3"
     chalk "^1.1.1"
@@ -6106,13 +6110,11 @@ node-sass@^3.8.0:
     get-stdin "^4.0.1"
     glob "^7.0.3"
     in-publish "^2.0.0"
-    lodash.assign "^4.2.0"
     lodash.clonedeep "^4.3.2"
     meow "^3.7.0"
     mkdirp "^0.5.1"
     nan "^2.3.2"
     node-gyp "^3.3.1"
-    npmlog "^4.0.0"
     request "^2.61.0"
     sass-graph "^2.1.1"
 
@@ -6192,18 +6194,18 @@ npm-which@^3.0.1:
     npm-path "^2.0.2"
     which "^1.2.10"
 
-npmlog@^4.0.0, npmlog@4.x:
-  version "4.0.0"
-  resolved "http://registry.npm.taobao.org/npmlog/download/npmlog-4.0.0.tgz#e094503961c70c1774eb76692080e8d578a9f88f"
+"npmlog@0 || 1 || 2 || 3":
+  version "3.1.2"
+  resolved "http://registry.npm.taobao.org/npmlog/download/npmlog-3.1.2.tgz#2d46fa874337af9498a2f12bb43d8d0be4a36873"
   dependencies:
     are-we-there-yet "~1.1.2"
     console-control-strings "~1.1.0"
     gauge "~2.6.0"
     set-blocking "~2.0.0"
 
-"npmlog@0 || 1 || 2 || 3":
-  version "3.1.2"
-  resolved "http://registry.npm.taobao.org/npmlog/download/npmlog-3.1.2.tgz#2d46fa874337af9498a2f12bb43d8d0be4a36873"
+npmlog@4.x:
+  version "4.0.0"
+  resolved "http://registry.npm.taobao.org/npmlog/download/npmlog-4.0.0.tgz#e094503961c70c1774eb76692080e8d578a9f88f"
   dependencies:
     are-we-there-yet "~1.1.2"
     console-control-strings "~1.1.0"
@@ -7485,9 +7487,9 @@ react-element-to-jsx-string@^5.0.0:
     stringify-object "^2.3.1"
     traverse "^0.6.6"
 
-react-helmet@3.2.1:
-  version "3.2.1"
-  resolved "http://r.cnpmjs.org/react-helmet/download/react-helmet-3.2.1.tgz#d325e2f9f63b6a926dea7e2332142e39503f869e"
+react-helmet@3.2.2:
+  version "3.2.2"
+  resolved "http://r.cnpmjs.org/react-helmet/download/react-helmet-3.2.2.tgz#1fc4646cbc5d26246ab45d5a84b504ed639810e6"
   dependencies:
     deep-equal "1.0.1"
     object-assign "^4.0.1"
@@ -7495,9 +7497,9 @@ react-helmet@3.2.1:
     shallowequal "0.2.2"
     warning "3.0.0"
 
-react-lite@^0.15.24:
-  version "0.15.25"
-  resolved "http://registry.npm.taobao.org/react-lite/download/react-lite-0.15.25.tgz#d3ff08b1761d80216d5bd1147ab3a2d11086c509"
+react-lite@0.15.26:
+  version "0.15.26"
+  resolved "http://r.cnpmjs.org/react-lite/download/react-lite-0.15.26.tgz#d3d4731fcadbc19d1e25beb05b89d6eb5f0c558b"
 
 react-proxy@^1.1.7:
   version "1.1.8"
@@ -8023,11 +8025,11 @@ sass-graph@^2.1.1:
     lodash "^4.0.0"
     yargs "^4.7.1"
 
-sass-loader@^4.0.0:
-  version "4.0.2"
-  resolved "http://registry.npm.taobao.org/sass-loader/download/sass-loader-4.0.2.tgz#a616eb770366543e64f547c8630f39c4da75f15d"
+sass-loader@4.0.0:
+  version "4.0.0"
+  resolved "http://r.cnpmjs.org/sass-loader/download/sass-loader-4.0.0.tgz#ba217b2b4a001670ad79cfd9a6caa30ac7b80e60"
   dependencies:
-    async "^2.0.1"
+    async "^1.4.0"
     loader-utils "^0.2.15"
     object-assign "^4.1.0"
 
