@@ -31,7 +31,6 @@ import styles from './styles.scss';
 import themeLight from './theme-light.css';
 import themeDark from './theme-dark.css';
 
-
 export class ThemeContainer extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
