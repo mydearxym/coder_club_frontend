@@ -321,7 +321,7 @@
     "node-sass": "3.8.0",
     "null-loader": "0.1.1",
     "offline-plugin": "3.4.2",
-    "plop": "1.6.0",
+    "plop": "1.7.0",
     "postcss-cssnext": "2.8.0",
     "postcss-focus": "1.0.0",
     "postcss-loader": "1.1.0",
