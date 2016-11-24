@@ -340,7 +340,7 @@
     "stylelint-config-standard": "14.0.0",
     "url-loader": "0.5.7",
     "webpack": "2.1.0-beta.25",
-    "webpack-bundle-analyzer": "1.4.1",
+    "webpack-bundle-analyzer": "1.5.4",
     "webpack-dashboard": "0.2.0",
     "webpack-dev-middleware": "1.8.4",
     "webpack-hot-middleware": "2.13.2"
