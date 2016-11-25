@@ -317,7 +317,7 @@
     "less-loader": "2.2.3",
     "lint-staged": "3.2.1",
     "lodash-webpack-plugin": "0.10.5",
-    "ngrok": "2.2.3",
+    "ngrok": "2.2.4",
     "node-sass": "3.8.0",
     "null-loader": "0.1.1",
     "offline-plugin": "3.4.2",
