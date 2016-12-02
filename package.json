@@ -293,7 +293,7 @@
     "chai-enzyme": "0.6.1",
     "cheerio": "0.22.0",
     "coveralls": "2.11.15",
-    "css-loader": "0.26.0",
+    "css-loader": "0.26.1",
     "enzyme": "2.6.0",
     "eslint": "3.11.1",
     "eslint-config-airbnb": "13.0.0",
