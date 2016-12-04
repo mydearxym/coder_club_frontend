@@ -258,7 +258,7 @@
     "react": "15.4.0",
     "react-decoration": "1.4.1",
     "react-dom": "15.4.0",
-    "react-helmet": "3.2.2",
+    "react-helmet": "3.2.3",
     "react-lite": "0.15.28",
     "react-redux": "4.4.6",
     "react-router": "3.0.0",
