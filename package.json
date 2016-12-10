@@ -318,7 +318,7 @@
     "lint-staged": "3.2.1",
     "lodash-webpack-plugin": "0.10.5",
     "ngrok": "2.2.4",
-    "node-sass": "3.8.0",
+    "node-sass": "3.13.1",
     "null-loader": "0.1.1",
     "offline-plugin": "4.5.3",
     "plop": "1.7.0",
