@@ -315,7 +315,7 @@
     "json-loader": "0.5.4",
     "less": "2.7.1",
     "less-loader": "2.2.3",
-    "lint-staged": "3.2.1",
+    "lint-staged": "3.2.2",
     "lodash-webpack-plugin": "0.10.5",
     "ngrok": "2.2.4",
     "node-sass": "3.13.1",
