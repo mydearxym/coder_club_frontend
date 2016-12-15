@@ -8,27 +8,27 @@
 
 import React, { PropTypes } from 'react';
 import Helmet from 'react-helmet';
-
-// Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
-import 'sanitize.css/sanitize.css';
+import styled from 'styled-components';
 
 /* import Img from 'components/Img';*/
 import Footer from 'components/Footer';
-/* import Banner from './banner-metal.jpg';
- * import A from 'components/A';
- * */
-import styles from './styles.css';
+
 
 // 按需加载: https://github.com/ant-design/ant-design/issues/900#issue-127675746
 /* import 'antd/dist/antd.css';*/
 
-/* <A className={styles.logoWrapper} href="https://twitter.com/mxstbr">*/
-/* <Img className={styles.logo} src={Banner} alt="react-boilerplate - Logo" />*/
-/* </A>*/
+const AppWrapper = styled.div`
+  max-width: calc(768px + 16px * 2);
+  margin: 0 auto;
+  display: flex;
+  min-height: 100%;
+  padding: 0 16px;
+  flex-direction: column;
+`;
 
 function App(props) {
   return (
-    <div className={styles.wrapper}>
+    <AppWrapper>
       <Helmet
         defaultTitle="React.js Boilerplate"
         meta={[
@@ -39,9 +39,9 @@ function App(props) {
 
       <h1>React 最佳实践!</h1>
 
-      {props.children}
+      {React.Children.toArray(props.children)}
       <Footer />
-    </div>
+    </AppWrapper>
   );
 }
 

@@ -1,6 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
-import styles from './styles.css';
+import Ul from './Ul';
+import Wrapper from './Wrapper';
 
 function List(props) {
   const ComponentToRender = props.component;
@@ -9,7 +10,10 @@ function List(props) {
   // If we have items, render them
   if (props.items) {
     content = props.items.map((item, index) => (
-      <ComponentToRender item={item} key={`item-${index}`} />
+      <ComponentToRender
+        item={item}
+        key={`item-${index}`}
+      />
     ));
   } else {
     // Otherwise render a single component
@@ -17,16 +21,14 @@ function List(props) {
   }
 
   return (
-    <div className={styles.listWrapper}>
-      <ul className={styles.list}>
-        {content}
-      </ul>
-    </div>
+    <Wrapper>
+      <Ul>{content}</Ul>
+    </Wrapper>
   );
 }
 
 List.propTypes = {
-  component: PropTypes.func.isRequired,
+  component: React.PropTypes.func.isRequired,
   items: React.PropTypes.array,
 };
 

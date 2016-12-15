@@ -2,7 +2,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
@@ -23,13 +22,6 @@ module.exports = require('./webpack.base.babel')({
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].chunk.js',
   },
-
-  // We use ExtractTextPlugin so we get a seperate CSS file instead
-  // of the CSS being in the JS and injected as a style tag
-  cssLoaders: ExtractTextPlugin.extract({
-    fallbackLoader: 'style-loader',
-    loader: 'css-loader?modules&-autoprefixer&importLoaders=1!postcss-loader!sass-loader',
-  }),
 
   plugins: [
     new LodashModuleReplacementPlugin(),
@@ -60,9 +52,6 @@ module.exports = require('./webpack.base.babel')({
       },
       inject: true,
     }),
-
-    // Extract the CSS into a seperate file
-    new ExtractTextPlugin('[name].[contenthash].css'),
 
     // Put it in the end to capture all the HtmlWebpackPlugin's
     // assets manipulations and do leak its manipulations to HtmlWebpackPlugin

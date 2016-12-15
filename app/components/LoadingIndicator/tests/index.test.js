@@ -1,13 +1,13 @@
-import { shallow } from 'enzyme';
+import { render } from 'enzyme';
 import React from 'react';
 
 import LoadingIndicator from '../index';
 
 describe('<LoadingIndicator />', () => {
-  it('should render 14 divs', () => {
-    const renderedComponent = shallow(
+  it('should render 13 divs', () => {
+    const renderedComponent = render(
       <LoadingIndicator />
     );
-    expect(renderedComponent.find('div').length).toBe(14);
+    expect(renderedComponent.find('div').length).toBe(13);
   });
 });
