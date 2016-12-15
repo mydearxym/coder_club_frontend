@@ -5,33 +5,28 @@
  */
 
 import React, { PropTypes } from 'react';
+import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
-import Helmet from 'react-helmet';
-
 import { createStructuredSelector } from 'reselect';
 
-import RepoListItem from 'containers/RepoListItem';
-import Button from 'components/Button';
+
 import H2 from 'components/H2';
 import List from 'components/List';
 import ListItem from 'components/ListItem';
 import LoadingIndicator from 'components/LoadingIndicator';
+import RepoListItem from 'containers/RepoListItem';
+import { selectRepos, selectLoading, selectError } from 'containers/App/selectors';
 
-import {
-  selectRepos,
-  selectLoading,
-  selectError,
-} from 'containers/App/selectors';
+import AtPrefix from './AtPrefix';
+import CenteredSection from './CenteredSection';
+import Form from './Form';
 
-import {
-  selectUsername,
-} from './selectors';
-
-import { changeUsername } from './actions';
+import Input from './Input';
+import Section from './Section';
 import { loadRepos } from '../App/actions';
-
-import styles from './styles.css';
+import { changeUsername } from './actions';
+import { selectUsername } from './selectors';
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
@@ -97,17 +92,18 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
         />
 
         <div>
-          <section className={`${styles.textSection} ${styles.centered}`}>
+          <CenteredSection>
             <H2>Start your next react project in seconds</H2>
             <p>A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices</p>
-          </section>
-          <section className={styles.textSection}>
+          </CenteredSection>
+          <Section>
             <H2>Try me!</H2>
-            <form className={styles.usernameForm} onSubmit={this.props.onSubmitForm}>
+            <Form onSubmit={this.props.onSubmitForm}>
               <label htmlFor="username">Show Github repositories by
-                <span className={styles.atPrefix}>@</span>
-                <input
-                  className={styles.input}
+                <AtPrefix>
+                  @
+                </AtPrefix>
+                <Input
                   id="username"
                   placeholder="mxstbr"
                   type="text"
@@ -115,11 +111,9 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
                   onChange={this.props.onChangeUsername}
                 />
               </label>
-            </form>
+            </Form>
             {mainContent}
-          </section>
-          <Button className="feature_page_button" handleRoute={this.openFeaturesPage}>Features</Button>
-          <Button handleRoute={this.openThemePage}>主题</Button>
+          </Section>
         </div>
       </article>
     );

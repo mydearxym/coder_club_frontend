@@ -1,4 +1,4 @@
-
+/* import expect from 'expect'*/
 import { shallow } from 'enzyme';
 import React from 'react';
 
@@ -6,6 +6,7 @@ import Img from '../index';
 
 const src = 'test.png';
 const alt = 'test';
+
 const renderComponent = (props = {}) => shallow(
   <Img
     alt={alt}

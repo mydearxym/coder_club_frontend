@@ -25,10 +25,15 @@ import 'file?name=[name].[ext]!./.htaccess';
 
 import { selectLocationState } from 'containers/App/selectors';
 import App from 'containers/App';
+import 'sanitize.css/sanitize.css';
+
 import createRoutes from './routes';
 
 /* import FontFaceObserver from 'fontfaceobserver';*/
 import configureStore from './store';
+
+// Import CSS reset and Global Styles
+import './global-styles';
 
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
 // the index.html file and this observer)
@@ -37,9 +42,9 @@ import configureStore from './store';
 
 // When Open Sans is loaded, add a font-family using Open Sans to the body
 /* openSansObserver.load().then(() => {*/
-  /* document.body.classList.add(styles.fontLoaded);*/
+  /* document.body.classList.add('fontLoaded');*/
   /* }, () => {*/
-  /* document.body.classList.remove(styles.fontLoaded);*/
+  /* document.body.classList.remove('fontLoaded');*/
   /* });*/
 
 

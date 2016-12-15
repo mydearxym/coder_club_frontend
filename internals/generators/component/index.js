@@ -28,11 +28,6 @@ module.exports = {
 
       return 'The name is required';
     },
-  }, {
-    type: 'confirm',
-    name: 'wantCSS',
-    default: true,
-    message: 'Does it have styling?',
   }],
   actions: (data) => {
     // Generate index.js and index.test.js
