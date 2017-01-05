@@ -5,20 +5,17 @@
 */
 
 import React from 'react';
-
-{{#if wantCSS}}
-import styles from './styles.css';
-{{/if}}
+// import styled from 'styled-components';
 
 function {{ properCase name }}() {
   return (
-    {{#if wantCSS}}
-    <div className={{curly true}}styles.{{ camelCase name }}{{curly}}>
-    {{else}}
     <div>
-    {{/if}}
     </div>
   );
 }
+
+{{ properCase name }}.propTypes = {
+
+};
 
 export default {{ properCase name }};

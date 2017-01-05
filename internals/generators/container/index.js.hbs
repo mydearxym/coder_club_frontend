@@ -4,26 +4,20 @@
  *
  */
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 {{#if wantHeaders}}
 import Helmet from 'react-helmet';
 {{/if}}
 {{#if wantActionsAndReducer}}
-import select{{properCase name}} from './selectors';
-{{/if}}
-{{#if wantCSS}}
-import styles from './styles.css';
+import { createStructuredSelector } from 'reselect';
+import makeSelect{{properCase name}} from './selectors';
 {{/if}}
 
 export class {{ properCase name }} extends React.{{{ component }}} { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      {{#if wantCSS}}
-      <div className={{curly true}}styles.{{ camelCase name }}{{curly}}>
-      {{else}}
       <div>
-      {{/if}}
         {{#if wantHeaders}}
         <Helmet
           title="{{properCase name}}"
@@ -32,14 +26,20 @@ export class {{ properCase name }} extends React.{{{ component }}} { // eslint-d
           ]{{curly}}
         />
         {{/if}}
-      This is {{properCase name}} container !
+        This is {{properCase name}} container !
       </div>
     );
   }
 }
 
+{{ properCase name }}.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
+
 {{#if wantActionsAndReducer}}
-const mapStateToProps = select{{properCase name}}();
+const mapStateToProps = createStructuredSelector({
+  {{name}}: makeSelect{{properCase name}}(),
+});
 {{/if}}
 
 function mapDispatchToProps(dispatch) {
