@@ -23,7 +23,7 @@ import '!file?name=[name].[ext]!./manifest.json';
 import 'file?name=[name].[ext]!./.htaccess';
 /* eslint-enable import/no-unresolved, import/extensions */
 
-import { selectLocationState } from 'containers/App/selectors';
+import { makeSelectLocationState } from 'containers/App/selectors';
 import App from 'containers/App';
 import 'sanitize.css/sanitize.css';
 
@@ -59,7 +59,7 @@ const store = configureStore(initialState, browserHistory);
 // is under the non-default key ("routing"), selectLocationState
 // must be provided for resolving how to retrieve the "route" in the state
 const history = syncHistoryWithStore(browserHistory, store, {
-  selectLocationState: selectLocationState(),
+  selectLocationState: makeSelectLocationState(),
 });
 
 // Set up the router, wrapping all Routes in the App component

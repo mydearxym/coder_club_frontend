@@ -2,11 +2,11 @@ import { fromJS } from 'immutable';
 
 import {
   selectGlobal,
-  selectCurrentUser,
-  selectLoading,
-  selectError,
-  selectRepos,
-  selectLocationState,
+  makeSelectCurrentUser,
+  makeSelectLoading,
+  makeSelectError,
+  makeSelectRepos,
+  makeSelectLocationState,
 } from '../selectors';
 
 describe('selectGlobal', () => {
@@ -19,8 +19,8 @@ describe('selectGlobal', () => {
   });
 });
 
-describe('selectCurrentUser', () => {
-  const currentUserSelector = selectCurrentUser();
+describe('makeSelectCurrentUser', () => {
+  const currentUserSelector = makeSelectCurrentUser();
   it('should select the current user', () => {
     const username = 'mxstbr';
     const mockedState = fromJS({
@@ -32,8 +32,8 @@ describe('selectCurrentUser', () => {
   });
 });
 
-describe('selectLoading', () => {
-  const loadingSelector = selectLoading();
+describe('makeSelectLoading', () => {
+  const loadingSelector = makeSelectLoading();
   it('should select the loading', () => {
     const loading = false;
     const mockedState = fromJS({
@@ -45,8 +45,8 @@ describe('selectLoading', () => {
   });
 });
 
-describe('selectError', () => {
-  const errorSelector = selectError();
+describe('makeSelectError', () => {
+  const errorSelector = makeSelectError();
   it('should select the error', () => {
     const error = 404;
     const mockedState = fromJS({
@@ -58,8 +58,8 @@ describe('selectError', () => {
   });
 });
 
-describe('selectRepos', () => {
-  const reposSelector = selectRepos();
+describe('makeSelectRepos', () => {
+  const reposSelector = makeSelectRepos();
   it('should select the repos', () => {
     const repositories = fromJS([]);
     const mockedState = fromJS({
@@ -73,8 +73,8 @@ describe('selectRepos', () => {
   });
 });
 
-describe('selectLocationState', () => {
-  const locationStateSelector = selectLocationState();
+describe('makeSelectLocationState', () => {
+  const locationStateSelector = makeSelectLocationState();
   it('should select the route as a plain JS object', () => {
     const route = fromJS({
       locationBeforeTransitions: null,

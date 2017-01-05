@@ -2,37 +2,20 @@
  * Test the HomePage
  */
 
-import { shallow, mount } from 'enzyme';
 import React from 'react';
+import { shallow, mount } from 'enzyme';
 
-import RepoListItem from 'containers/RepoListItem';
-import List from 'components/List';
-import LoadingIndicator from 'components/LoadingIndicator';
-
+import ReposList from 'components/ReposList';
 import { HomePage, mapDispatchToProps } from '../index';
 import { changeUsername } from '../actions';
 import { loadRepos } from '../../App/actions';
 
 describe('<HomePage />', () => {
-  it('should render the loading indicator when its loading', () => {
+  it('should render the repos list', () => {
     const renderedComponent = shallow(
-      <HomePage loading />
+      <HomePage loading error={false} repos={[]} />
     );
-    expect(renderedComponent.contains(<List component={LoadingIndicator} />)).toBe(true);
-  });
-
-  it('should render an error if loading failed', () => {
-    const renderedComponent = mount(
-      <HomePage
-        error={{ message: 'Loading failed!' }}
-        loading={false}
-      />
-    );
-    expect(
-      renderedComponent
-        .text()
-        .indexOf('Something went wrong, please try again!')
-    ).toBeGreaterThan(-1);
+    expect(renderedComponent.contains(<ReposList loading error={false} repos={[]} />)).toEqual(true);
   });
 
   it('should render fetch the repos on mount if a username exists', () => {
@@ -45,26 +28,6 @@ describe('<HomePage />', () => {
       />
     );
     expect(submitSpy).toHaveBeenCalled();
-  });
-
-  it('should render the repositories if loading was successful', () => {
-    const repos = [{
-      owner: {
-        login: 'mxstbr',
-      },
-      html_url: 'https://github.com/mxstbr/react-boilerplate',
-      name: 'react-boilerplate',
-      open_issues_count: 20,
-      full_name: 'mxstbr/react-boilerplate',
-    }];
-    const renderedComponent = shallow(
-      <HomePage
-        error={false}
-        repos={repos}
-      />
-    );
-
-    expect(renderedComponent.contains(<List component={RepoListItem} items={repos} />)).toEqual(true);
   });
 
   describe('mapDispatchToProps', () => {

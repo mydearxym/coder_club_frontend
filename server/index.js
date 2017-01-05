@@ -7,7 +7,6 @@ const argv = require('minimist')(process.argv.slice(2));
 const setup = require('./middlewares/frontendMiddleware');
 const isDev = process.env.NODE_ENV !== 'production';
 const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel ? require('ngrok') : false;
-const qrcode = require('qrcode-terminal');
 const resolve = require('path').resolve;
 const app = express();
 
@@ -20,11 +19,12 @@ setup(app, {
   publicPath: '/',
 });
 
-// get the intended port number, use port 3000 if not provided
+// get the intended host and port number, use localhost and port 3000 if not provided
+const host = argv.host || process.env.HOST || 'localhost';
 const port = argv.port || process.env.PORT || 3000;
 
 // Start your app.
-app.listen(port, (err) => {
+app.listen(port, host, (err) => {
   if (err) {
     return logger.error(err.message);
   }
@@ -36,10 +36,9 @@ app.listen(port, (err) => {
         return logger.error(innerErr);
       }
 
-      logger.appStarted(port, url);
-      qrcode.generate(url, { small: true }, (code) => console.log(code));
+      logger.appStarted(port, host, url);
     });
   } else {
-    logger.appStarted(port);
+    logger.appStarted(port, host);
   }
 });

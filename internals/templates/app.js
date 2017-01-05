@@ -20,7 +20,7 @@ import { applyRouterMiddleware, Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { useScroll } from 'react-router-scroll';
 
-import { selectLocationState } from 'containers/App/selectors';
+import { makeSelectLocationState } from 'containers/App/selectors';
 import { install } from 'offline-plugin/runtime';
 
 
@@ -45,7 +45,7 @@ const store = configureStore(initialState, browserHistory);
 // is under the non-default key ("routing"), selectLocationState
 // must be provided for resolving how to retrieve the "route" in the state
 const history = syncHistoryWithStore(browserHistory, store, {
-  selectLocationState: selectLocationState(),
+  selectLocationState: makeSelectLocationState(),
 });
 
 // Set up the router, wrapping all Routes in the App component

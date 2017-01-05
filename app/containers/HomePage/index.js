@@ -4,38 +4,24 @@
  * This is the first thing users see of our App, at the '/' route
  */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
-import { push } from 'react-router-redux';
 import { createStructuredSelector } from 'reselect';
 
-
+import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
 import H2 from 'components/H2';
-import List from 'components/List';
-import ListItem from 'components/ListItem';
-import LoadingIndicator from 'components/LoadingIndicator';
-import RepoListItem from 'containers/RepoListItem';
-import { selectRepos, selectLoading, selectError } from 'containers/App/selectors';
-
+import ReposList from 'components/ReposList';
 import AtPrefix from './AtPrefix';
 import CenteredSection from './CenteredSection';
 import Form from './Form';
-
 import Input from './Input';
 import Section from './Section';
 import { loadRepos } from '../App/actions';
 import { changeUsername } from './actions';
-import { selectUsername } from './selectors';
+import { makeSelectUsername } from './selectors';
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  constructor(props) {
-    super(props);
-    this.state = {
-      cur_theme: '',
-    };
-  }
-
   /**
    * when initial state username is not null, submit the form to load repos
    */
@@ -44,53 +30,23 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
       this.props.onSubmitForm();
     }
   }
-  /**
-   * Changes the route
-   *
-   * @param  {string} route The route we want to go to
-   */
-  openRoute = (route) => {
-    this.props.changeRoute(route);
-  };
-
-  /**
-   * Changed route to '/features'
-   */
-  openFeaturesPage = () => {
-    this.openRoute('/features');
-  };
-
-  openThemePage = () => {
-    this.openRoute('/theme');
-  };
 
   render() {
-    let mainContent = null;
-
-    // Show a loading indicator when we're loading
-    if (this.props.loading) {
-      mainContent = (<List component={LoadingIndicator} />);
-
-    // Show an error if there is one
-    } else if (this.props.error !== false) {
-      const ErrorComponent = () => (
-        <ListItem item={'Something went wrong, please try again!'} />
-      );
-      mainContent = (<List component={ErrorComponent} />);
-    // If we're not loading, don't have an error and there are repos, show the repos
-    } else if (this.props.repos !== false) {
-      mainContent = (<List component={RepoListItem} items={this.props.repos} />);
-    }
+    const { loading, error, repos } = this.props;
+    const reposListProps = {
+      loading,
+      error,
+      repos,
+    };
 
     return (
       <article>
         <Helmet
+          title="Home Page"
           meta={[
             { name: 'description', content: 'A React.js Boilerplate application homepage' },
           ]}
-          title="Home Page"
         />
-
         <div>
           <CenteredSection>
             <H2>Start your next react project in seconds</H2>
@@ -99,20 +55,21 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           <Section>
             <H2>Try me!</H2>
             <Form onSubmit={this.props.onSubmitForm}>
-              <label htmlFor="username">Show Github repositories by
+              <label htmlFor="username">
+                Show Github repositories by
                 <AtPrefix>
                   @
                 </AtPrefix>
                 <Input
                   id="username"
-                  placeholder="mxstbr"
                   type="text"
+                  placeholder="mxstbr"
                   value={this.props.username}
                   onChange={this.props.onChangeUsername}
                 />
               </label>
             </Form>
-            {mainContent}
+            <ReposList {...reposListProps} />
           </Section>
         </div>
       </article>
@@ -121,39 +78,35 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 }
 
 HomePage.propTypes = {
-  changeRoute: PropTypes.func,
-  loading: PropTypes.bool,
-  error: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.bool,
+  loading: React.PropTypes.bool,
+  error: React.PropTypes.oneOfType([
+    React.PropTypes.object,
+    React.PropTypes.bool,
   ]),
-  repos: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.bool,
+  repos: React.PropTypes.oneOfType([
+    React.PropTypes.array,
+    React.PropTypes.bool,
   ]),
-  onSubmitForm: PropTypes.func,
-  username: PropTypes.string,
-  onChangeUsername: PropTypes.func,
+  onSubmitForm: React.PropTypes.func,
+  username: React.PropTypes.string,
+  onChangeUsername: React.PropTypes.func,
 };
 
 export function mapDispatchToProps(dispatch) {
   return {
     onChangeUsername: (evt) => dispatch(changeUsername(evt.target.value)),
-    changeRoute: (url) => dispatch(push(url)),
     onSubmitForm: (evt) => {
       if (evt !== undefined && evt.preventDefault) evt.preventDefault();
       dispatch(loadRepos());
     },
-
-    dispatch,
   };
 }
 
 const mapStateToProps = createStructuredSelector({
-  repos: selectRepos(),
-  username: selectUsername(),
-  loading: selectLoading(),
-  error: selectError(),
+  repos: makeSelectRepos(),
+  username: makeSelectUsername(),
+  loading: makeSelectLoading(),
+  error: makeSelectError(),
 });
 
 // Wrap the component to inject dispatch and state into it
