@@ -229,6 +229,7 @@
   "jest": {
     "collectCoverageFrom": [
       "app/**/*.{js,jsx}",
+      "!app/*/RbGenerated*/*.{js,jsx}",
       "!app/app.js",
       "!app/routes.js"
     ],
@@ -237,8 +238,8 @@
       "app"
     ],
     "moduleNameMapper": {
-      ".*\\.css$": "<rootDir>/mocks/cssModule.js",
-      ".*\\.jpg$": "<rootDir>/mocks/image.js"
+      ".*\\.(css|less|styl|scss|sass)$": "<rootDir>/mocks/cssModule.js",
+      ".*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/mocks/image.js"
     },
     "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/test-bundler.js",
     "testRegex": "tests/.*\\.test\\.js$"
@@ -318,6 +319,7 @@
     "lint-staged": "3.2.2",
     "lodash-webpack-plugin": "0.10.5",
     "ngrok": "2.2.4",
+    "node-plop": "0.5.4",
     "node-sass": "3.13.1",
     "null-loader": "0.1.1",
     "offline-plugin": "4.5.3",
