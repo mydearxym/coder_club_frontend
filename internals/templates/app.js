@@ -31,6 +31,9 @@ import App from 'containers/App';
 import configureStore from './store';
 import createRoutes from './routes';
 
+// Import CSS reset and Global Styles
+import './global-styles';
+
 // Create redux store with history
 // this uses the singleton browserHistory provided by react-router
 // Optionally, this could be changed to leverage a created history
