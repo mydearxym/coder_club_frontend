@@ -12,6 +12,7 @@ import styled from 'styled-components';
 
 /* import Img from 'components/Img';*/
 import Footer from 'components/Footer';
+import withProgressBar from 'components/ProgressBar';
 
 
 // 按需加载: https://github.com/ant-design/ant-design/issues/900#issue-127675746
@@ -26,7 +27,7 @@ const AppWrapper = styled.div`
   flex-direction: column;
 `;
 
-function App(props) {
+export function App(props) {
   return (
     <AppWrapper>
       <Helmet
@@ -49,4 +50,4 @@ App.propTypes = {
   children: PropTypes.node,
 };
 
-export default App;
+export default withProgressBar(App);
