@@ -321,7 +321,7 @@
     "lodash-webpack-plugin": "0.10.7",
     "ngrok": "2.2.4",
     "node-plop": "0.5.4",
-    "node-sass": "3.13.1",
+    "node-sass": "4.3.0",
     "null-loader": "0.1.1",
     "offline-plugin": "4.5.4",
     "plop": "1.7.3",
