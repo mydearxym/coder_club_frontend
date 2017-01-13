@@ -55,6 +55,15 @@ describe('asyncInjectors', () => {
       expect(actual.toJS()).toEqual(expected.toJS());
     });
 
+    it('should not assign reducer if already existing', () => {
+      const injectReducer = injectAsyncReducer(store);
+
+      injectReducer('test', reducer);
+      injectReducer('test', () => {});
+
+      expect(store.asyncReducers.test.toString()).toEqual(reducer.toString());
+    });
+
     it('should throw if passed invalid store shape', () => {
       let result = false;
 
