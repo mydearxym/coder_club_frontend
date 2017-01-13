@@ -9,7 +9,7 @@ describe('<HomePage />', () => {
       <HomePage />
     );
     expect(renderedComponent.contains(
-      'Try me!'
+      <h1>This is the Homepage!</h1>
     )).toEqual(true);
   });
 });

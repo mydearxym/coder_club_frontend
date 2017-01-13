@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import NotFoundPage from '../index';
-/* import messages from '../messages';*/
 
 describe('<NotFoundPage />', () => {
   it('should render the page message', () => {
@@ -10,7 +9,7 @@ describe('<NotFoundPage />', () => {
       <NotFoundPage />
     );
     expect(renderedComponent.contains(
-      'Page not found.'
+      <h1>Page Not Found</h1>
     )).toEqual(true);
   });
 });
