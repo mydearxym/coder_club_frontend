@@ -327,7 +327,7 @@
     "qrcode-terminal": "0.11.0",
     "react-addons-test-utils": "15.4.2",
     "rimraf": "2.5.4",
-    "sass-loader": "4.0.0",
+    "sass-loader": "5.0.1",
     "shelljs": "0.7.5",
     "sinon": "2.0.0-pre.4",
     "style-loader": "0.13.1",
