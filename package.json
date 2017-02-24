@@ -331,7 +331,7 @@
     "shelljs": "0.7.5",
     "sinon": "2.0.0-pre.4",
     "style-loader": "0.13.1",
-    "url-loader": "0.5.7",
+    "url-loader": "0.5.8",
     "webpack": "2.2.0-rc.3",
     "webpack-bundle-analyzer": "2.2.0",
     "webpack-dashboard": "0.2.0",
