@@ -16,7 +16,7 @@ function List(props) {
       />
     ));
   } else {
-    // Otherwise render a single component
+    // Otherwise render a single component.
     content = (<ComponentToRender />);
   }
 
