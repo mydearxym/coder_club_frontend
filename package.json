@@ -1,7 +1,7 @@
 {
   "name": "coder_club_frontend",
   "version": "0.2.0",
-  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "description": "reforum 重新定义论坛",
   "repository": {
     "type": "git",
     "url": "git://github.com/mydearxym/coder_club_frontend.git"
