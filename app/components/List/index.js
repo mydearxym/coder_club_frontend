@@ -7,7 +7,7 @@ function List(props) {
   const ComponentToRender = props.component;
   let content = (<div></div>);
 
-  // If we have items, render them
+  // If we have items, render them.
   if (props.items) {
     content = props.items.map((item) => (
       <ComponentToRender
