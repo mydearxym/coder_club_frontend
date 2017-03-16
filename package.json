@@ -164,6 +164,7 @@
       ],
       "react/jsx-boolean-value": 2,
       "react/require-extension": 0,
+      "react/require-default-props": 0,
       "react/jsx-indent-props": [
         2,
         2
