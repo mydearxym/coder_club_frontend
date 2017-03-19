@@ -7,7 +7,7 @@ function Footer() {
   return (
     <Wrapper>
       <section>
-        <p>This project is licensed under the MIT license..</p>
+        <p>This project is licensed under the MIT license.</p>
       </section>
       <section>
         <p>Made with love by <A href="https://twitter.com/mxstbr">Max Stoiber</A>.</p>
