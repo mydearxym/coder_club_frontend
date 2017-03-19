@@ -12,7 +12,7 @@ describe('<Footer />', () => {
     );
     expect(renderedComponent.contains(
       <section>
-        <p>This project is licensed under the MIT license.</p>
+        <p>This project is licensed under the MIT license..</p>
       </section>
     )).toBe(true);
   });
