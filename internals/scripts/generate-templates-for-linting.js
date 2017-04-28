@@ -51,7 +51,7 @@ componentGen.runActions({ name: 'RbGeneratedComponentStatelessfunction', type: '
 const containerGen = plop.getGenerator('container');
 containerGen.runActions({
   name: 'RbGeneratedContainerPureComponent',
-  component: 'React.PureComponent',
+  type: 'React.PureComponent',
   wantHeaders: true,
   wantActionsAndReducer: true,
   wantSagas: true,
@@ -63,7 +63,7 @@ containerGen.runActions({
 
 const ContainerComponent = containerGen.runActions({
   name: 'RbGeneratedContainerComponent',
-  component: 'React.Component',
+  type: 'React.Component',
   wantHeaders: true,
   wantActionsAndReducer: true,
   wantSagas: true,
