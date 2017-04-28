@@ -16,9 +16,6 @@ import { createStructuredSelector } from 'reselect';
 {{#if wantActionsAndReducer}}
 import makeSelect{{properCase name}} from './selectors';
 {{/if}}
-{{#if wantMessages}}
-import messages from './messages';
-{{/if}}
 
 function {{ properCase name }}() {
   return (
@@ -31,9 +28,7 @@ function {{ properCase name }}() {
         ]{{curly}}
       />
     {{/if}}
-    {{#if wantMessages}}
-      <FormattedMessage {...messages.header} />
-    {{/if}}
+    header
     </div>
   );
 }

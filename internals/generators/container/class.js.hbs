@@ -16,9 +16,6 @@ import { createStructuredSelector } from 'reselect';
 {{#if wantActionsAndReducer}}
 import makeSelect{{properCase name}} from './selectors';
 {{/if}}
-{{#if wantMessages}}
-import messages from './messages';
-{{/if}}
 
 export class {{ properCase name }} extends {{{ type }}} { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -32,9 +29,7 @@ export class {{ properCase name }} extends {{{ type }}} { // eslint-disable-line
           ]{{curly}}
         />
       {{/if}}
-      {{#if wantMessages}}
-        <FormattedMessage {...messages.header} />
-      {{/if}}
+      header
       </div>
     );
   }
