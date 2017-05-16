@@ -22,6 +22,11 @@
   <a href="https://coveralls.io/github/mydearxym/coder_club_frontend?branch=master">
     <img src="https://coveralls.io/repos/github/mydearxym/coder_club_frontend/badge.svg?branch=master" alt="Test Coverage" />
   </a>
+  
+  <a href="https://github.com/prettier/prettier">
+    <img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg" alt="prettier" />
+  </a>
+
 </div>
 
 
