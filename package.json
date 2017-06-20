@@ -335,7 +335,7 @@
     "rimraf": "2.5.4",
     "sass-loader": "4.0.0",
     "shelljs": "0.7.6",
-    "sinon": "2.0.0-pre.5",
+    "sinon": "2.3.5",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
     "webpack": "2.5.0",
