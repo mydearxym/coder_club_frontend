@@ -284,7 +284,7 @@
     "babel-cli": "6.22.2",
     "babel-core": "6.22.1",
     "babel-eslint": "7.1.1",
-    "babel-loader": "6.2.10",
+    "babel-loader": "7.1.0",
     "babel-plugin-dynamic-import-node": "1.0.2",
     "babel-plugin-lodash": "3.2.10",
     "babel-plugin-react-transform": "2.0.2",
