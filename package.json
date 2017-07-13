@@ -339,7 +339,7 @@
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
     "webpack": "2.5.0",
-    "webpack-bundle-analyzer": "2.3.1",
+    "webpack-bundle-analyzer": "2.8.3",
     "webpack-dev-middleware": "1.10.0",
     "webpack-hot-middleware": "2.16.1"
   }
