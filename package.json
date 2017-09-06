@@ -341,6 +341,6 @@
     "webpack": "2.5.0",
     "webpack-bundle-analyzer": "2.3.1",
     "webpack-dev-middleware": "1.10.0",
-    "webpack-hot-middleware": "2.16.1"
+    "webpack-hot-middleware": "2.19.0"
   }
 }
